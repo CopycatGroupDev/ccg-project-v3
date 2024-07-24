@@ -53,13 +53,14 @@ const SocialLink = styled(Link)`
   gap: 1rem;
   text-decoration: none;
   color: black;
+  font-size: 1.25rem;
 `;
 
 const SocialImage = styled.img`
   object-fit: cover;
   aspect-ratio: 1;
   width: fit-content;
-  height: 55px;
+  height: 80px;
 `;
 
 const SocialSpan = styled.span`
@@ -106,15 +107,15 @@ const SocialSection = () => {
         <SocialLinks>
           
           <SocialLink to={'https://www.instagram.com/copycat_group/'}>
-            <SocialImage src="/extLogos/Instagram_logo_2016.svg.webp" inverted alt="Instagram" />
+            <SocialImage src="/extLogos/Groupe 690.png" inverted alt="Instagram" />
             <SocialSpan>CopyCat Group</SocialSpan>
           </SocialLink>
           <SocialLink to={'https://www.facebook.com/copycat.groupe/'}>
-            <SocialImage src="/extLogos/R.png" alt="Facebook" />
+            <SocialImage src="/extLogos/Icon metro-facebook.png" alt="Facebook" />
             <SocialSpan>copycat_group</SocialSpan>
           </SocialLink>
           <SocialLink to={'https://fr.linkedin.com/company/copycat-group'}>
-            <SocialImage src="/extLogos/socialLogo3.PNG" inverted alt="LinkedIn" />
+            <SocialImage src="/extLogos/Icon metro-linkedin.png" inverted alt="LinkedIn" />
             <SocialSpan>CopyCat Group</SocialSpan>
           </SocialLink>
         </SocialLinks>
