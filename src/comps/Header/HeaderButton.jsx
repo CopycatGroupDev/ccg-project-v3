@@ -6,8 +6,9 @@ export const HeaderButton = styled(Link)`
     border-radius: 999em;
     border: 0;
     background-color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 2rem;
     text-decoration: none;
+    text-transform: uppercase;
     color: ${({ color }) => color || 'black'};
 `;

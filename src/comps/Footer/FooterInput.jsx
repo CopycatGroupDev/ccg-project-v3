@@ -8,7 +8,7 @@ export const FooterInput = styled.input`
         border: 0
     }
     
-    &[type="button"] {
+    &[type="button"], &[type="submit"] {
         background-color: #0000;
         color: white;
         border: 2px solid white;

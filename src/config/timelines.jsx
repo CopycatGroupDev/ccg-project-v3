@@ -33,15 +33,27 @@ const animImg = (img, key) => (
 );
 
 export default {
+	shop: [
+		['Bureautique', '/logo/Groupe 810.png', 'bur', <>{'Fournitures, imprimantes domestiques, cartouches...'}</>, 'Je suis intéressé'],
+            ['Informatique & Multimédia', '/logo/Groupe 811.png', 'inf', <>{'Ordinateur, Mac, tablette, écran interactif, accessoires...'}</>, 'Je suis intéressé'],
+            ['Services', '/logo/Groupe 812.png', 'srv', <>{'Réparation informatique, installation de licences, transfert et recuperation de données...'}</>, 'Je suis intéressé'],
+            ['Domiciliation', '/logo/Groupe 810.png', 'dom', <>{'Domiciliation d\'entreprise, transfert de courriers, archives...'}</>, 'Je suis intéressé']
+	],
 	solutions: [
-		['Bureautique', 'https://copycatgroup.fr/images/bur1.png', 'bur', <>{'Vente et location d\'imprimante'}<br />{'Petit et grand format, laser ou jet d\'encre...'}</>, 'Je suis intéressé'],
-		['Téléphonie', 'https://copycatgroup.fr/images/tel1.png', 'tel', 'Téléphones fixes, mobiles, internet...', 'Je suis intéressé'],
-		['Digital', 'https://copycatgroup.fr/images/dig1.png', 'dig', 'Archivage, dématérialisation des factures, note de frais...', 'Je suis intéressé'],
-		['Informatique', 'https://copycatgroup.fr/images/inf1.png', 'inf', 'Vente, maintenance, infogérance', 'Je suis intéressé']
+		['Bureautique', '/logo/Groupe 806.png', 'bur', <>{'Vente et location d\'imprimante'}<br />{'Petit et grand format, laser ou jet d\'encre...'}</>, 'Je suis intéressé'],
+		['Digital', '/logo/Groupe 807.png', 'dig', 'Archivage, dématérialisation des factures, logiciel de gestion documentaire...', 'Je suis intéressé'],
+		['Informatique et réseaux', '/logo/Groupe 808.png', 'inf', 'Infogérance, sécurité, Microsoft 365...', 'Je suis intéressé'],
+		['Télephonie & Internet', '/logo/Groupe 809.png', 'tel', 'Mobile et fixe, réseau, Internet', 'Je suis intéressé']
+	],
+	print: [
+		['Reprographie / Imprimerie', '/logo/Groupe 814.png', 'rep', 'Carte de visite, Reliure, Plastification, Flyer, Tirage photo et grands formats...', 'Je suis intéressé'],
+		['Support PLV', '/logo/Groupe 815.png', 'plv', 'Roll\'up, Drapeaux, Vitrophanie, Logo 3D...', 'Je suis intéressé'],
+		['Objet personnalisé', '/logo/Groupe 816.png', 'obj', 'Mugs, Stylos, Clés USB, T-shirt, Casquette...', 'Je suis intéressé'],
+		['Routage', '/logo/Groupe 817.png', 'rtg', 'Courrier postale, emailing...', 'Je suis intéressé']
 	],
 	labs: [
-		['Développement web', 'https://copycatgroup.fr/images/dev1.png', 'dev', <> {'Programmation, développement de site sur-mesure'} <ImgContainer>{labsImgs[0].map(animImg)}</ImgContainer> </>, 'Je suis intéressé'],
-		['Graphisme', 'https://copycatgroup.fr/images/gra1.png', 'gra', <> {'Identité visuelle, communication visuelle, logo...'} <ImgContainer>{labsImgs[1].map(animImg)}</ImgContainer> </>, 'Je suis intéressé'],
-		['Communication digitale', '/logo/comdig1.svg', 'com', <> {'LinkedIn, Facebook, Instagram...'} <ImgContainer>{labsImgs[2].map(animImg)}</ImgContainer> </>, 'Je suis intéressé']
+		['Graphisme', '/logo/Groupe 818.png', 'gra', <> {'Identité visuelle, maquettes, publicités...'} <ImgContainer>{labsImgs[1].map(animImg)}</ImgContainer> </>, 'Je suis intéressé'],
+		['Développement web', '/logo/Groupe 819.png', 'dev', <> {'Site vitrine, e-commerce, UX/UI'} <ImgContainer>{labsImgs[0].map(animImg)}</ImgContainer> </>, 'Je suis intéressé'],
+		['Réseaux sociaux', '/logo/Groupe 825.png', 'com', <> {'LinkedIn, Facebook, Instagram, Google Business...'} <ImgContainer>{labsImgs[2].map(animImg)}</ImgContainer> </>, 'Je suis intéressé']
 	]
 }

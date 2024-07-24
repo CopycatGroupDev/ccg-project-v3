@@ -3,6 +3,7 @@ import { HeaderNavItemLi as Li } from "./HeaderNavItemLi";
 import { HeaderNavItemDropdown } from "./HeaderNavItemDropdown";
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+import { Icon } from "./HeaderNavItemDropdownIcon";
 
 const Link = styled(Lnk)`padding: 1rem 0rem;`;
 
@@ -20,11 +21,11 @@ export function HeaderNavItem({ path, title, dropdown, color }) {
         <Link onMouseOver={setDropdown} to={path}>{title}</Link>
         <div className="dropdownContainer">
             <HeaderNavItemDropdown initial={{ opacity: 0 }} ref={dropdownRef} whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }} $color={color}>
-                {dropdown.map(({ path, title, desc }) => <Link to={path} key={title}>
-                    <img src="" alt="" />
+                {dropdown.map(({ path, title, desc, icon }) => <Link to={path} key={title}>
+                    <Icon src={`/icons/dropdowns/${icon}.png`} alt="" />
                     <div>
                         {title}
-                        <small>{desc}</small>
+                        {/* <small>{desc}</small> */}
                     </div>
                 </Link>)}
             </HeaderNavItemDropdown>

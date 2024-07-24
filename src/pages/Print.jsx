@@ -1,25 +1,32 @@
 import { HeaderButton } from "../comps/Header/HeaderButton";
 import Default from "../wrappers/Default";
-import Header from '../comps/Header/Header';
+import Header from '../comps/Header/Main';
 import { colors } from "../config/colors";
 import { Timeline } from "../comps/Timeline";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link as Link_ } from "react-router-dom";
+import timelines from "../config/timelines";
+import Links from "../comps/Links";
+
+const data = {
+  title: "Print - Copycat Group",
+  color: colors.print,
+  header : {
+      bg: '/banners/Bannière CP.png',
+      logo: '/logo/pr1.png',
+      rows : [
+        <>Imprimez vos photos, reliez et plastifiez vos documents…</>,
+        <HeaderButton key={btoa(Math.random())} onClick={() => window.open('http://www.copycatprint.fr/accueil/')} color={colors.print}> IMPRIMEZ VOS DOCUMENTS</HeaderButton>
+      ],
+      appendixRow : <>Nous offrons des solutions d'impression de haute qualité pour vos brochures, affiches et documents professionnels. Avec notre expertise, nous garantissons une présentation soignée et un rendu impeccable de vos supports imprimés. Personnalisez  aussi vos goodies afin d’y apporter une touche personnelle et renforcer votre image de marque</>
+  }
+}
 
 export default function Print() {
-    return <Default title={"Print - Copycat Group"}>
-        <Header
-            textsRows={['Imprimez vos photos, reliez et plastifiez vos documents…', <HeaderButton key={btoa(Math.random())} onClick={() => window.open('http://www.copycatprint.fr/accueil/')} color={colors.print}>Demander une expertise</HeaderButton>]}
-            plusTextRow={`Spécialiste des techniques et supports d'impression, COPYCAT PRINT saura répondre aux besoins et attentes de vos projets. De la carte de visite à la vitrophanie, en passant par les objets et textiles personnalisés. Confiez-nous la production de vos supports imprimés`}
-            bg={'/banners/print.png'}
-            logo={'/logo/ccg.jpg'}
-            color={colors.print} />
-        <Timeline color={colors.print} list={[
-            ['Reprographie / Imprimerie', 'https://copycatgroup.fr/images/rep1.png', 'rep', 'Carte de visite, Reliure, Plastification, Flyer...', 'Je suis intéressé'],
-            ['Objet personnalisé', 'https://copycatgroup.fr/images/mug.png', 'mug', 'Mugs, Stylos, Clés USB, T-shirt, Casquette...', 'Je suis intéressé'],
-            ['Support PLV', 'https://copycatgroup.fr/images/sup1.png', 'sup', 'Roll\'up, Drapeaux, Vitrophanie, Logo 3D...', 'Je suis intéressé']
-        ]} />
+    return <Default value={data}>
+        <Header />
+        <Timeline color={colors.print} list={timelines.print} />
         <StyledIframe
             src="https://e.issuu.com/embed.html?d=catalogue_produits_en_marque_blanche&u=e3m4"
             initial={{ scale: 0.75 }}
@@ -27,12 +34,9 @@ export default function Print() {
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
         />
-        <Container>
-            <span>Une partie de nos impressions en ligne sur :</span>
-            <Link to="http://www.copycatprint.fr/accueil/" color={colors.print}>
-                www.copycatprint.fr
-            </Link>
-        </Container>
+        <Links id="links" banner={true} color={colors.print} title={"Une partie de nos impressions en ligne sur :"} links={[
+            { img: '/photos/Supports imprimés.png', text: 'Imprimez vos supports de communications', link: 'http://copycatprint.fr/', color: colors.print }
+        ]} />
     </Default>
 }
 

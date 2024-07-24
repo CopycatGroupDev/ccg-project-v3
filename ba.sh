@@ -1,0 +1,1 @@
+concurrently "nodemon CCG_MASTER.js" "npm run dev"

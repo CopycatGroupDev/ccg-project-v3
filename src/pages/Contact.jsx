@@ -1,6 +1,6 @@
 import ContactForm from "../comps/Contact/ContactForm";
 import AltHeader from "../comps/Header/AltHeader";
-import Header from "../comps/Header/Header";
+import Header from "../comps/Header/Main";
 import Default from "../wrappers/Default";
 
 export default function Contact() {

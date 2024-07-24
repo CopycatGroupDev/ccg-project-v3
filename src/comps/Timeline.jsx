@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { AppContext } from '../wrappers/Provider';
-import Form from './ConcactForm/Form';
+import Form from './ContactForm/Form';
 import { colors } from '../config/colors';
 import { Container as C } from './Container';
 
@@ -149,11 +149,11 @@ const Ligacao = styled.div`
 `;
 
 const Img = styled.img`
-  background-color: white;
+  --background-color: white;
   border-radius: 50%;
   width: 75%;
-  box-shadow: var(--box-shadow);
-  z-index: 10;
+  --box-shadow: var(--box-shadow);
+  z-index: 1;
   justify-self: center;
 `;
 
@@ -193,12 +193,6 @@ export const Timeline = ({ color = '#000', list }) => {
     window.addEventListener('load', hr);
     window.addEventListener('scroll', hr);
     window.addEventListener('resize', hr);
-    if (location.hash) {
-      window.scroll(
-        0,
-        document.querySelector(location.hash)?.getBoundingClientRect().top
-      );
-    }
   }, [location.hash, timeline, x]);
 
  	return (
@@ -220,7 +214,7 @@ export const Timeline = ({ color = '#000', list }) => {
                 <Img src={image} alt="" />
               </div>
               <Text>{text}</Text>
-              <Button color={color} onClick={() => {console.log(list); modal.open(
+              <Button color={color} onClick={() => {console.log(list); modal?.open(
                     <Form
                     formType="Modal"
                     motionCond={false}

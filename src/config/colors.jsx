@@ -4,8 +4,8 @@ export const colors = {
     solution: '#09a13b',
     solutions: '#09a13b',
     shop: '#f39115',
-    print: '#ed00b5',
+    print: '#ed01b5',
     labs: '#6e2380',
-    sevres: '#ed00b5',
+    sevres: '#ed01b5',
     boulogne: '#f39115'
 }

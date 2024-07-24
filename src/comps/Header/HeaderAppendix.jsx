@@ -10,6 +10,7 @@ const HeaderAppendix = styled.div`
     align-items: center;
     text-align: center;
     font-size: 26px;
+    font-weight: 300;
     line-height: 32px;
     box-sizing: content-box;
 

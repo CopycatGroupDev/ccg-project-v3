@@ -9,9 +9,12 @@ export const HeaderNavItemDropdown = styled(motion.div)`
     box-shadow: 0 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
 
     &>a{
-        padding: 1rem 1.5rem;
+        padding: 0.75rem 1.5rem;
         color: ${({ $color }) => $color};
         display: flex;
+        align-items: center;
+        height: 4rem;
+        gap: 1rem;
 
         &>div{
             display: flex;

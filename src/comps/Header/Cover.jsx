@@ -11,6 +11,10 @@ export const Cover = styled(motion.img)`
         & { object-fit: cover; height: 100%;}
     }
     @media only screen and (min-width: 1700px) {
-        & { object-position: center var(--topGap); height: 100%; }
+        & {
+            object-position: center var(--topGap);
+            height: 100%;
+            object-fit: cover;
+        }
     }
 `;

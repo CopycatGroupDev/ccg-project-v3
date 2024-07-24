@@ -118,7 +118,7 @@ const ActionsGrid = styled.div`
 export default function RSE() {
     return <Default title={"Contact - Copycat Group"}>
         <AltHeader
-            bg={'/banners/rse.png'}
+            bg={'/banners/Bannière RSE.png'}
             height={400}
             coverFull={true}
             bgCover={true}/>

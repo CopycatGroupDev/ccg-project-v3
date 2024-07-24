@@ -16,7 +16,7 @@ const CarouselContainer = styled.div`
 const Slide = styled(motion.img)`
   position: absolute;
   width: 75%;
-  height: 100%;
+  height: 66%;
   object-fit: contain;
 `;
 
@@ -53,7 +53,8 @@ const Button = styled.button`
 
 const Indicators = styled.div`
   position: absolute;
-  bottom: 1rem;
+  --bottom: 1rem;
+  bottom: 0;
   display: flex;
   justify-content: space-around;
   gap: 1rem;
@@ -63,7 +64,7 @@ const Indicator = styled.button`
   aspect-ratio: 1/1;
   height: 0.66rem;
   padding: 0;
-  background-color: ${props => (props.isActive ? '#0061ad' : '#4d91c6')};
+  background-color: ${props => (props.$isActive ? '#0061ad' : '#4d91c6')};
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -130,13 +131,13 @@ const Carousel = ({ images, className }) => {
           }}
         />
       </AnimatePresence>
-      <Button onClick={() => paginate(-1)}>&#9664;</Button>
-      <Button onClick={() => paginate(1)}>&#9654;</Button>
+      {/* <Button onClick={() => paginate(-1)}>&#9664;</Button>
+      <Button onClick={() => paginate(1)}>&#9654;</Button> */}
       <Indicators>
         {images.map((_, index) => (
           <Indicator
             key={index}
-            isActive={index === imageIndex}
+            $isActive={index === imageIndex}
             onClick={() => goToSlide(index)}
           />
         ))}

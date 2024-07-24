@@ -40,13 +40,19 @@ const contactForm = {
     { Component: Input, $colSpan: true, placeholder: 'Sujet', name: 'subject' },
     { Component: Textarea, $colSpan: true, placeholder: 'Votre message', name: 'message' }
   ],
-  Home: [
+  /*Home: [
     { Component: Input, $colSpan: false, placeholder: 'Nom', name: 'name' },
     { Component: Input, $colSpan: false, placeholder: 'Prénom', name: 'firstname' },
     { Component: Input, $colSpan: false, placeholder: 'Numéro de téléphone', name: 'number', type: 'tel', defaultValue: "01 23 45 67 89" },
     { Component: Input, $colSpan: false, placeholder: 'Société', name: 'firm' },
     { Component: Input, $colSpan: true, placeholder: 'Votre email', name: 'mail', type: 'email' },
     { Component: Input, $colSpan: true, placeholder: 'Message', name: 'message' }
+  ],*/
+  Home: [
+    { Component: Input, $colSpan: false, placeholder: 'Nom', name: 'name' },
+    { Component: Input, $colSpan: false, placeholder: 'Société', name: 'firm' },
+    { Component: Input, $colSpan: true, placeholder: 'Votre email', name: 'mail', type: 'email' },
+    { Component: Input, $colSpan: true, placeholder: 'Numéro de téléphone', name: 'number', type: 'tel', defaultValue: "01 23 45 67 89"  }
   ],
   Boulogne: [
     { Component: Input, $colSpan: false, placeholder: 'Nom', name: 'name' },

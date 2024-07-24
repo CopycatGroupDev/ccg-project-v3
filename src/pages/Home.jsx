@@ -1,31 +1,38 @@
-import { useContext } from "react";
 import { HeaderButton } from "../comps/Header/HeaderButton";
 import Default from "../wrappers/Default";
-import Header from '../comps/Header/Header';
-import { AppContext } from "../wrappers/Provider";
+import Header from '../comps/Header/Main';
 import Services from "../comps/Home/HomeServices";
 import PDG from "../comps/Home/PDG";
-import Sponsors from "../comps/Home/Sponsors";
+import Sponsors from "../comps/Home/Sponsors/Main";
 import HomeContact from "../comps/Home/HomeContact";
-import contactForms from "../config/contactForms";
-import Form from "../comps/ConcactForm/Form";
 import { colors } from "../config/colors";
-import { useNavigate } from "react-router-dom";
+import Intro from "../comps/Home/HomeIntro";
+
+const button = <HeaderButton
+    key={btoa(Math.random())}
+    color={colors.default}
+    to={'/contact'}>
+    Demander une expertise
+</HeaderButton>
+
+const data = {
+    title: "Copycat Group",
+    color: colors.default,
+    header : {
+        bg: '/banners/Bannières NC.png',
+        logo: '/logo/ccg.jpg',
+        rows : [
+            <>" Document as a Service "</>,
+            button,
+            <>Votre interlocuteur privilégié au service du document !</>
+        ]
+    }
+}
 
 export default function Home() {
-    const { modal } = useContext(AppContext);
-    const navigate = useNavigate();
-
-    return <Default title={"Copycat Group"}>
-        <Header
-            textsRows={[
-                '« Document as a Service »',
-                'Votre interlocuteur privilégié au service du document !',
-                <HeaderButton key={btoa(Math.random())} color={colors.default} onClick={() => navigate('/contact')}>Demander une expertise</HeaderButton>
-            ]}
-            bg={'/banners/home.png'}
-            logo={'/logo/ccg.jpg'}
-            color={'#0061ad'} />
+    return <Default value={data}>
+        <Header />
+        <Intro />
         <Services />
         <PDG />
         <Sponsors />

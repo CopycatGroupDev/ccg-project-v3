@@ -4,6 +4,6 @@ import { Container } from "../Container";
 export const FooterContainer = styled(Container)`
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 1rem;
     padding: 2rem;
 `;

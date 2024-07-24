@@ -7,7 +7,7 @@ export const HeaderText = styled.div`
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 1rem 0;
+    padding: 1rem;
     font-size: 20px;
     margin-bottom: 3.5rem;
     position: relative;

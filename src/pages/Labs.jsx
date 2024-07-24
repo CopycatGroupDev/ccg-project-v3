@@ -1,40 +1,45 @@
 import { HeaderButton } from "../comps/Header/HeaderButton";
 import Default from "../wrappers/Default";
-import Header from '../comps/Header/Header';
+import Header from '../comps/Header/Main';
 import { Timeline } from "../comps/Timeline";
 import { colors } from "../config/colors";
-import styled from "styled-components";
 import timelines from "../config/timelines";
 import { useContext } from "react";
 import { AppContext } from "../wrappers/Provider";
-import Form from "../comps/ConcactForm/Form";
+import Form from "../comps/ContactForm/Form";
+
+const data = {
+    title: "Labs - Copycat Group",
+    color: colors.labs,
+    header : {
+        bg: '/banners/Bannière CL.png',
+        logo: '/logo/lab1.png',
+        rows : [
+            <>Créer, modifier, refondre.<br />Faites appel a des professionnels du développement et du graphisme pour vos projets.</>,
+        ],
+        appendixRow : <>Notre équipe de professionnels est dédiée à transformer vos idées en réalité en créant ou reprenant vos visuels graphiques, en concevant des sites web attrayant et conviviaux ou encore en développant votre image sur vos réseaux sociaux.</>
+    }
+}
 
 export default function Solutions() {
     const { modal } = useContext(AppContext);
+    const button = <HeaderButton
+    key={btoa(Math.random())}
+    color={colors.labs}
+    onClick={() => modal.open(
+        <Form
+        title="Contactez-nous"
+        formType="Modal"
+        motionCond={false}
+        color={colors.default}
+        options={{ category : timelines.labs.map(([title]) => title), }}
+        selected={{ category : 0, }} />
+    )}>
+        CONTACTEZ NOUS
+    </HeaderButton>
 
-    return <Default title={"Labs - Copycat Group"}>
-        <Header
-            textsRows={[
-                <>Créer, modifier, refondre.<br />Faites appel a des professionnels du développement et du graphisme pour vos projets.</>,
-                <HeaderButton
-                key={btoa(Math.random())}
-                color={colors.labs}
-                onClick={() => modal.open(
-                    <Form
-                    title="Contactez-nous"
-                    formType="Modal"
-                    motionCond={false}
-                    color={colors.default}
-                    options={{ category : timelines.labs.map(([title]) => title), }}
-                    selected={{ category : 0, }} />
-                )}>
-                    Demander une expertise
-                </HeaderButton>
-            ]}
-            plusTextRow={`COPYCAT LABS : Votre partenaire complet en maquettage, programmation et conception graphique pour vos sites web. De la vitrine en ligne à l'e-commerce, nous vous accompagnons de A à Z. Professionnels des outils de conception graphiques, nous vous accompagnerons dans vos projets de création`}
-            bg={'/banners/labs.png'}
-            logo={'/logo/ccg.jpg'}
-            color={colors.labs} />
+    return <Default value={{ ...data, header : { ...data.header, rows : [...data.header.rows, button] }}}>
+        <Header />
         <Timeline color={colors.labs} list={timelines.labs} />
     </Default>
 }

@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import BannerTitle from '../BannerTitle';
+import { colors } from '../../config/colors';
 
 // Styled components
 const Container = styled.div`
   padding: 0;
   display: flex;
   width: 100%;
-  background-color: #0061ad;
   
   @media (max-width: 1300px) {
     flex-direction: column;
@@ -24,8 +25,6 @@ const Content = styled.div`
   align-items: center;
   gap: 1rem;
   justify-content: center;
-  padding: 2rem;
-  color: white;
 
   & > p {
     text-align: left;
@@ -53,7 +52,7 @@ const SocialLink = styled(Link)`
   align-items: center;
   gap: 1rem;
   text-decoration: none;
-  color: white;
+  color: black;
 `;
 
 const SocialImage = styled.img`
@@ -61,13 +60,9 @@ const SocialImage = styled.img`
   aspect-ratio: 1;
   width: fit-content;
   height: 55px;
-  filter: ${props => props.inverted && 'invert(1)'};
 `;
 
 const SocialSpan = styled.span`
-  padding: 0.5rem 1rem;
-  border: 2px solid white;
-  border-radius: 1rem;
   white-space: nowrap;
 `;
 
@@ -77,7 +72,7 @@ const BackgroundImage = styled.img`
 `;
 
 // Main component
-const SocialSection = () => {
+/* const SocialSection = () => {
   return (
     <Container>
       <Content>
@@ -101,5 +96,30 @@ const SocialSection = () => {
     </Container>
   );
 };
+ */
+const SocialSection = () => {
+  return (
+    <Container>
+      <Content>
+    		<BannerTitle $color={colors.default}>Rejoignez-nous sur les réseaux sociaux </BannerTitle>
 
+        <SocialLinks>
+          
+          <SocialLink to={'https://www.instagram.com/copycat_group/'}>
+            <SocialImage src="/extLogos/Instagram_logo_2016.svg.webp" inverted alt="Instagram" />
+            <SocialSpan>CopyCat Group</SocialSpan>
+          </SocialLink>
+          <SocialLink to={'https://www.facebook.com/copycat.groupe/'}>
+            <SocialImage src="/extLogos/R.png" alt="Facebook" />
+            <SocialSpan>copycat_group</SocialSpan>
+          </SocialLink>
+          <SocialLink to={'https://fr.linkedin.com/company/copycat-group'}>
+            <SocialImage src="/extLogos/socialLogo3.PNG" inverted alt="LinkedIn" />
+            <SocialSpan>CopyCat Group</SocialSpan>
+          </SocialLink>
+        </SocialLinks>
+      </Content>
+    </Container>
+  );
+};
 export default SocialSection;
