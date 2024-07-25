@@ -17,7 +17,7 @@ const data = {
         bg: '/banners/Bannière CS.png',
         logo: '/logo/sol1.png',
         rows : [
-            <>Mettez en place les outils adaptés à votre environnement professionnel !</>,
+            <>Mettez en place les solutions documentaires adaptées à votre environnement professionnel !</>,
         ],
         appendixRow : <>De la conception de votre infrastructure à la sécurité des données, nous proposons des solutions sur mesure pour accroître votre productivité et augmenter votre sécurité. La mise en place de vos projets est systématiquement accompagnée d’un contrat de maintenance ou de support pour votre sérénité</>
     }

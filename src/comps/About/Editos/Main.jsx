@@ -46,7 +46,7 @@ const Editos = () => (
         <Paragraph><span>LE DOCUMENT</span> n'est pas qu'une question de matériel. C'est aussi un service et tout ce qui touche à son environnement : le digital, du matériel d'appoint, des fournitures, de l'équipement personnalisé.</Paragraph> */}
         <Paragraph>La volonté de <span>COPYCAT GROUP</span> est de rassembler toute l'expertise documentaire. Nous avons à coeur de vous proposer une analyse et une solution documentaire complètes.</Paragraph>
         <Paragraph>Face à une offre de plus en plus importante, comment choisir son matériel et vers qui se tourner ? Quels noms doivent se trouver en premier dans votre carnet d'adresses?</Paragraph>
-        <Paragraph><span>LE DOCUMENT</span> n'est pas qu'une question de matériel. C'est aussi un service et tout ce qui touche à son environnement : le digital, du matériel d'appoint, des fournitures, de l'équipement personnalisé.</Paragraph>
+        <Paragraph><span>LE DOCUMENT</span> n'est pas qu'une question de matériel. C'est aussi un service et tout ce qui touche à son environnement : de la bureautique, du matériel d'appoint, des fournitures, de l'équipement personnalisé, jusqu'aux outils de traitement automatisé et de la communication digitale.</Paragraph>
         <div className="flex justify-end -mt-6">
           <SvgIcon id="Groupe_69" data-name="Groupe 69" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.909 17.523">
             <path id="Tracé_73" data-name="Tracé 73" d="M6.54,8.775a4.926,4.926,0,0,1-5.071-.9A4.447,4.447,0,0,1,1.2,1.528,4.608,4.608,0,0,1,7.73,1.385C10.4,3.971,10.543,7.133,9.455,10.4,8.285,13.846,5.7,16.084,2.311,17.6c-.39-.554-.739-1.068-1.17-1.7C3.912,14.3,6.026,12.2,6.54,8.775Z" transform="translate(12.818 -0.1)" />

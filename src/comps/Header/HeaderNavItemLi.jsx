@@ -1,11 +1,18 @@
 import styled from "styled-components";
 import zIndex from "../../config/zIndex";
+import { colors } from "../../config/colors";
 
 export const HeaderNavItemLi = styled.li`
     position: relative;
+    
+    a {
+        color: ${() => colors.default};
+    }
 
     & a:hover, & a:has(+ div:hover){
         color: ${({ $color }) => $color};
+        z-index: ${zIndex('navdropdown')};
+        position: relative;
     }
 
     & .dropdownContainer{

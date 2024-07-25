@@ -9,7 +9,7 @@ const Button = styled.button`
   margin-top: 0.5rem;
   grid-column: span 2;
   width: 50%;
-  justify-self: center;
+  justify-self: left;
 `;
 
 export default Button;

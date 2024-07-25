@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { HeaderNavBurgerMenu as BurgerMenu } from "./HeaderNavBurgerMenu";
 import { HeaderNavItems as Items } from "./HeaderNavItems";
-import { HeaderNavLayout as Layout } from "./HeaderNavLayout";
-import { HeaderNavLogo as Logo } from "./HeaderNavLogo";
 import { Link } from "react-router-dom";
 
 const NavLayout = styled.div`
@@ -20,15 +18,27 @@ const NavLayout = styled.div`
 
     ul {
         display: flex;
+        flex-wrap: wrap;
         padding: 0;
         column-gap: 2rem;
-        flex-wrap: wrap;
         align-content: flex-start;
         justify-content: center;
+        width: 100%;
+
 
         li {
             list-style: none;
             height: fit-content;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
+    @media only screen and (max-width: 1400px) {
+        ul{
+            span.cc{
+                --display: none;
+            }
         }
     }
 
@@ -77,7 +87,7 @@ export default function HeaderNav() {
         <Col $w={2}>
             <NavLogo src={"logo/logo.png"} />
         </Col>
-        <Col $w={8}>
+        <Col style={{"--overflow": "hidden"}} $w={10}>
             <Items />
         </Col>
         <Col $w={2}>

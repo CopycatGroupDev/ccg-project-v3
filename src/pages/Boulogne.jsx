@@ -20,7 +20,7 @@ const data = {
         bg: '/banners/boulogne.svg',
         logo: '/logo/Logo comptoir Boulogne.png',
         rows : [
-            <>Retrouvez notre boutique COPYCAT Sèvres avec un service de Photocopie reprographie et impression numérique.</>,
+            <>Retrouvez notre comptoir COPYCAT Boulogne pour l'achat de vos fournitures bureautiques, informatiques, vos impressions et ses experts pour un service de qualité !</>,
             button
         ],
     }
@@ -34,7 +34,7 @@ export default function Boulogne() {
             horaires={horaires?.Boulogne}
             renseignements={renseignements?.Boulogne}
             title={"Le comptoir de Boulogne"}
-            desc={"Découvrez Copycat DPS Boulogne, votre choix idéal pour les fournitures de bureau et les services d'impression.De l'impression à la réparation d'ordinateurs, notre équipe dévouée vous offre des produits de qualité et des services personnalisés pour répondre à vos besoins professionnels. Faites-nous confiance pour une expérience d'achat agréable et des solutions documentaires adaptées"}
+            desc={"Découvrez notre comptoir COPYCAT Boulogne, votre choix idéal pour les fournitures de bureau et les services d'impression. Nous vous proposons une large sélection de produits de qualité et des services personnalisés pour répondre à tous vos besoins en CREATION, INFORMATIQUE, IMPRIMERIE, FOURNITURES et SERVICES. Notre équipe vous offre des solutions documentaires adaptées et une expérience d'achat agréable. Faites confiance à notre expertise et à notre engagement envers la satisfaction client pour des services sur mesure qui vous simplifient la vie au quotidien."}
             photo={"/photos/Boulogne.jpg"} />
         <Services
             services={services.sevres} />

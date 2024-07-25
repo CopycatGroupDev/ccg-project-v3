@@ -16,10 +16,10 @@ const data = {
       bg: '/banners/Bannière CP.png',
       logo: '/logo/pr1.png',
       rows : [
-        <>Imprimez vos photos, reliez et plastifiez vos documents…</>,
+        <>Réalisez des impressions à votre image !</>,
         <HeaderButton key={btoa(Math.random())} onClick={() => window.open('http://www.copycatprint.fr/accueil/')} color={colors.print}> IMPRIMEZ VOS DOCUMENTS</HeaderButton>
       ],
-      appendixRow : <>Nous offrons des solutions d'impression de haute qualité pour vos brochures, affiches et documents professionnels. Avec notre expertise, nous garantissons une présentation soignée et un rendu impeccable de vos supports imprimés. Personnalisez  aussi vos goodies afin d’y apporter une touche personnelle et renforcer votre image de marque</>
+      appendixRow : <>Nous offrons des solutions d'impression de haute qualité pour vos brochures, affiches et documents professionnels. Avec notre expertise, nous garantissons une présentation soignée et un rendu impeccable de vos supports imprimés. Personnalisez  aussi vos goodies afin d’y apporter une touche personnelle et renforcer votre image de marque !</>
   }
 }
 

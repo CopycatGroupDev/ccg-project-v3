@@ -7,11 +7,12 @@ import { Link } from 'react-router-dom';
 import RSEActions from './../config/RSEActions'; // Import your RSEActions data
 import { Container } from "../comps/Container";
 import { Icons } from "../config/icons";
+import { Title2 as T2 } from "../comps/Title";
 
-const Title2 = styled.h2`
+const Title2 = styled(T2)`
     font-size: 1.25rem;
     line-height: 1.75rem;
-  font-family: Arial;
+    margin: 0.83em 0;
   font-weight: bold;
   color: ${({ color }) => color || 'black'};
   text-align: center;
@@ -20,7 +21,9 @@ const Title2 = styled.h2`
 
 const TitleBig = styled(Title2)`
     font-size: 2.25rem;
-    line-height: 2.5rem;`
+    line-height: 2.5rem;
+    font-weight: inherit;
+`
 
 const Divider = styled.hr`
   width: 100%;
@@ -30,7 +33,7 @@ const Divider = styled.hr`
 const Paragraph = styled.p`
   font-size: 20px;
   line-height: 28px;
-  color: #9ca3af;
+  color: ${({ color }) => color || '#9ca3af'};
   text-align: center;
 `;
 
@@ -151,8 +154,8 @@ export default function RSE() {
             <FlexBox color="white" $align="stretch" style={{ padding: 0 }}>
                 <FlexBox bgColor="#0061ad" direction="column" $gap="16px" style={{ minWidth: '44.66%' }}>
                     <TitleBig color="white">1% Pour Les Animaux</TitleBig>
-                    <Paragraph>CopyCat Group s’engage dans le cadre d’un partenariat avec 1% pour les animaux.</Paragraph>
-                    <Paragraph>Nous reversons 1% de notre chiffre d’affaires afin de protéger les animaux et la biodiversité.</Paragraph>
+                    <Paragraph color="white">CopyCat Group s’engage dans le cadre d’un partenariat avec 1% pour les animaux.</Paragraph>
+                    <Paragraph color="white">Nous reversons 1% de notre chiffre d’affaires afin de protéger les animaux et la biodiversité.</Paragraph>
                 </FlexBox>
                 <ImageContainer>
                     <Image src={'/photos/panda-roux.jpg'} alt="" />
@@ -169,8 +172,8 @@ export default function RSE() {
                         <Icons icon={icon} size={90} viewBox={viewBox} />
                     </IconContainer>
                     <div style={{ padding: '1em' }}>
-                        <Title2 modifier="uppercase" color="#0061ad">{title}</Title2>
-                        <Paragraph>{text}</Paragraph>
+                        <Title2 style={{ textAlign: 'left' }} modifier="uppercase" color="#0061ad">{title}</Title2>
+                        <Paragraph style={{ textAlign: 'left' }}>{text}</Paragraph>
                     </div>
                 </Card>
             ))}

@@ -1,1 +1,1 @@
-concurrently "nodemon CCG_MASTER.js" "npm run dev"
+concurrently "cd ccg-project-client && nodemon CCG_MASTER.js" "npm run dev"

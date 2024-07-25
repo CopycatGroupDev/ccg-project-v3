@@ -13,7 +13,7 @@ const data = {
         bg: '/banners/Bannière CSh.png',
         logo: '/logo/ccs3.jpg',
         rows : [
-            'Achetez vos fournitures bureautique, écrans, appareils informatiques, multimédia et bien plus !',
+            'Achetez vos fournitures bureautiques et informatiques, écrans, appareils multimédia et bénéficiez de nos services sur mesure !',
             <HeaderButton key={btoa(Math.random())} color={colors.shop} onClick={e => {
                e.preventDefault();
                window.scrollTo(0, document.querySelector('#links').getBoundingClientRect().top); 
