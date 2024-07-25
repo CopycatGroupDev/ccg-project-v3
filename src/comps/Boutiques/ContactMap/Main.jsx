@@ -10,10 +10,10 @@ export default function ContactMap({ page, mapUrl, color }) {
         <ContentWrapper>
             <Form formType={page} motionCond={false} color={color} title={"Faites vous rappeler !"} />
             <MotionDiv
-                initial={{ opacity: 0, y: 200 }}
-                transition={{ duration: 0.5, delay: 0.75 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                //initial={{ opacity: 0, y: 200 }}
+                //transition={{ duration: 0.5, delay: 0.75 }}
+                //whileInView={{ opacity: 1, y: 0 }}
+                //viewport={{ once: true }}
             >
                 <Iframe
                 src={mapUrl}

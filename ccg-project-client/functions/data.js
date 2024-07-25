@@ -1,20 +1,19 @@
-import { readFileSync, writeFileSync } from "fs";
-import __dirname from "../config/__dirname.js";
-import path from "path";
+const fs = require('fs');
+const path = require('path');
 
-export function getData (table) {
+exports.getData = function (table) {
 	return JSON.parse(
-		readFileSync(
+		fs.readFileSync(
 			path.resolve(__dirname, `./data/${table}.json`),
 			'utf-8'
 		)
 	);
 }
 
-export function addData (table, data) {
-	const dataFile = getData(table);
+exports.addData = function (table, data) {
+	const dataFile = exports.getData(table);
 	dataFile.push(data);
-	writeFileSync(
+	fs.writeFileSync(
 		path.resolve(__dirname, `./data/${table}.json`),
 		JSON.stringify(dataFile, null, 4)
 	);
