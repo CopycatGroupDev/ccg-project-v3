@@ -5,7 +5,7 @@
 
 require('dotenv').config()
 const { dev_mode, ssl_key, ssl_cert } = process.env;
-console.log(dev_mode);
+console.log(dev_mode, typeof dev_mode);
 
 const http = require('http');
 const https = require('https');
