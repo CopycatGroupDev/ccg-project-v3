@@ -25,7 +25,7 @@ module.exports = [
     '/contact',
     '/about',
     '/rse',
-    '/boutiques',
+    '/comptoirs',
     '/sevres',
     '/boulogne',
     '/mentions',
