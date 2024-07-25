@@ -13,8 +13,12 @@ io.on("connection", socket => {
 });
 
 const PORT = 80;
-httpServer.listen(PORT, () => {
+const PORT2 = 443;
+httpServer.http.listen(PORT, () => {
     console.log('Listening on port ' + PORT);
+});
+httpServer.https.listen(PORT2, () => {
+    console.log('Listening on port ' + PORT2);
 });
 
 /*

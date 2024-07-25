@@ -10,6 +10,7 @@ const https = require('https');
 
 const app = require('../controllers/index.js');
 
-module.exports = https.createServer(app);
+module.exports.http = http.createServer(app);
+module.exports.https = https.createServer(app);
 //import { createServer } from "http";
 //import app from './../controllers/index.js';
