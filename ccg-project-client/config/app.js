@@ -28,7 +28,7 @@ const app = express();
 const ext = { extended: true };
 
 app.use(express.static(path.resolve(__dirnameX, 'dist')));
-app.use(express.static(__dirnameX));
+//app.use(express.static(__dirnameX));
 app.use(cors.func(cors.options));
 app.use(express.json());
 app.use(express.urlencoded(ext));
