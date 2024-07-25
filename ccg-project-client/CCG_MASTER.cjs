@@ -12,7 +12,7 @@ io.on("connection", socket => {
     });
 });
 
-httpServer.listen(80, "0.0.0.0", () => {
+httpServer.listen(80, () => {
     console.log('Listening on port 80');
 });
 
