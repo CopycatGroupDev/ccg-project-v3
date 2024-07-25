@@ -1,17 +1,19 @@
-// old code
 // const http = require('http');
 // const app = require('../controllers/index.js');
 
 // export default http.createServer(app);
 
-// commonjs
+require('dotenv').config()
+const { dev_mode, ssl_key, ssl_cert } = process.env;
+console.log();
+
 const http = require('http');
 const https = require('https');
 
 const fs = require('fs');
-const options = {
-    key:fs.readFileSync('../ssl/privkey.pem'),
-    cert:fs.readFileSync('../ssl/allchange.pem')
+const options = dev_mode ? {} : {
+    key:fs.readFileSync(ssl_key),
+    cert:fs.readFileSync(ssl_cert)
 };
 
 const app = require('../controllers/index.js');
