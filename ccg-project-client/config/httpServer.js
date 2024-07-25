@@ -11,7 +11,7 @@ const http = require('http');
 const https = require('https');
 
 const fs = require('fs');
-const options = dev_mode ? {} : {
+const options = JSON.parse(dev_mode) ? {} : {
     key:fs.readFileSync(ssl_key),
     cert:fs.readFileSync(ssl_cert)
 };
