@@ -32,7 +32,7 @@ const contactForm = {
         'Par internet',
         'Par une connaissance',
         'Par notre comptoir Copycat Sèvres',
-        'Par notre comptoir Copycat DPS Boulogne',
+        'Par notre comptoir Copycat Boulogne',
         'Autres'
       ].map((option) => <option key={option}>{option}</option>) },
     { Component: Input, $colSpan: true, placeholder: 'Ville', name: 'city' },

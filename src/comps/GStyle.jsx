@@ -30,6 +30,14 @@ const GStyle = createGlobalStyle`
         justify-content: center;
         align-items: center;
     }
+
+    button, a, input[type=submit], input[type=button] {
+        cursor: pointer;
+        transition: box-shadow 0.2s ease-in-out;
+    }
+    button:hover, a:not(.footer a):hover, input[type=submit]:hover, input[type=button]:hover {
+        box-shadow: inset 0 0 0 999px #0002;
+    }  
 `;
 
 export default GStyle;

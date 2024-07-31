@@ -16,7 +16,7 @@ export default function Footer() {
         { path: 'https://fr.linkedin.com/company/copycat-group', Icon: ImLinkedin },
     ]
     
-    return <Style>
+    return <Style className="footer">
         <Container>
             <Columns>
                 <Column>

@@ -25,8 +25,8 @@ const data = {
         rows : [ <>Un comptoir unique, un expert dans chaque métier.</> ],
     },
     cards : [
-        { title: 'Copycat Sèvres', color: colors.print, img : '/photos/Boutique Sèvres.png', infos : renseignements.Sèvres, link : '/sevres' },
-        { title: 'Copycat Boulogne', color: colors.shop, img : '/photos/Boutique Boulogne.png', infos : renseignements.Boulogne, link : '/boulogne' },
+        { title: 'Copycat Sèvres', color: colors.print, img : '/photos/Sèvres2.jpg', infos : renseignements.Sèvres, link : '/sevres' },
+        { title: 'Copycat Boulogne', color: colors.shop, img : '/photos/Boulogne2.jpg', infos : renseignements.Boulogne, link : '/boulogne' },
     ]
 }
 

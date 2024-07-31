@@ -16,7 +16,7 @@ const Sponsors = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <Title $color={"#1e40af"}>Ils nous font confiance !</Title>
+        <Title $color={"#0061AD"}>Ils nous font confiance !</Title>
         <p>Faites comme nos clients, faites-nous confiance pour notre accompagnement et la réalisation de vos projets documentaires ! Adressez-vous à notre guichet unique pour traiter vos besoins de CREATION, d'INFORMATIQUE, d'IMPRIMERIE, de FOURNITURES et SERVICES</p>
       </TextBlock>
       <CarouselContainer

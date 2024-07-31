@@ -19,7 +19,7 @@ const data = {
                window.scrollTo(0, document.querySelector('#links').getBoundingClientRect().top); 
             }}>Commandez en ligne</HeaderButton>
         ],
-        appendixRow : <>Nous fournissons tout le nécessaire pour équiper votre espace de travail : fournitures de bureau classiques, produits spécialisés, installation de logiciels, réparation de matériel et domiciliation d'entreprise. Concentrez-vous sur votre activité professionnelle en toute sérénité grâce à nos services</>
+        appendixRow : <>Nous fournissons tout le nécessaire pour équiper votre espace de travail : fournitures de bureau classiques, produits spécialisés, installation de logiciels, réparation de matériel et domiciliation d'entreprise. Concentrez-vous sur votre activité professionnelle en toute sérénité grâce à nos services.</>
     }
 }
 

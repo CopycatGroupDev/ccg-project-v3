@@ -35,7 +35,7 @@ export default function Boulogne() {
             renseignements={renseignements?.Boulogne}
             title={"Le comptoir de Boulogne"}
             desc={"Découvrez notre comptoir COPYCAT Boulogne, votre choix idéal pour les fournitures de bureau et les services d'impression. Nous vous proposons une large sélection de produits de qualité et des services personnalisés pour répondre à tous vos besoins en CREATION, INFORMATIQUE, IMPRIMERIE, FOURNITURES et SERVICES. Notre équipe vous offre des solutions documentaires adaptées et une expérience d'achat agréable. Faites confiance à notre expertise et à notre engagement envers la satisfaction client pour des services sur mesure qui vous simplifient la vie au quotidien."}
-            photo={"/photos/Boulogne.jpg"} />
+            photo={"/photos/Boulogne2.jpg"} />
         <Services
             services={services.sevres} />
         <Links title={'Commandez en ligne'} links={[

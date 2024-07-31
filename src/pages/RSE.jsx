@@ -154,7 +154,7 @@ export default function RSE() {
             <FlexBox color="white" $align="stretch" style={{ padding: 0 }}>
                 <FlexBox bgColor="#0061ad" direction="column" $gap="16px" style={{ minWidth: '44.66%' }}>
                     <TitleBig color="white">1% Pour Les Animaux</TitleBig>
-                    <Paragraph color="white">CopyCat Group s’engage dans le cadre d’un partenariat avec 1% pour les animaux.</Paragraph>
+                    <Paragraph color="white">CopyCat Group s’engage dans le cadre d’un partenariat</Paragraph>
                     <Paragraph color="white">Nous reversons 1% de notre chiffre d’affaires afin de protéger les animaux et la biodiversité.</Paragraph>
                 </FlexBox>
                 <ImageContainer>

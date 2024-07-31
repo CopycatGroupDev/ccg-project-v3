@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function ContactMap({ page, mapUrl, color }) {
     return <Container>
         <ContentWrapper>
-            <Form formType={page} motionCond={false} color={color} title={"Faites vous rappeler !"} />
+            <Form formType={page} motionCond={false} color={color} />
             <MotionDiv
                 //initial={{ opacity: 0, y: 200 }}
                 //transition={{ duration: 0.5, delay: 0.75 }}

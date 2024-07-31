@@ -38,7 +38,7 @@ const Form = ({ formType, title, motionCond = true, color, options = {}, selecte
   return (
     <motion.div {...motionProps}>
       <FormContainer>
-        {title?.length > 0 && <FormTitle>{title}</FormTitle>}
+        {title?.length > 0 && <FormTitle $color={color}>{title}</FormTitle>}
         {desc && <p style={{ gridColumn: '1 / -1' }}>{desc}</p>}
         <FormWrapper onSubmit={submit}>
           {formFields.map(({ Component, $colSpan, ...props }, id) => {
