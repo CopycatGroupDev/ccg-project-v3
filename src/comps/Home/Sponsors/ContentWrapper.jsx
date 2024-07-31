@@ -13,6 +13,10 @@ export default styled.div`
     flex-direction: row;
   }
 
+  @media (max-width: 640px) {
+    padding: 0;
+  }
+
   & > div {
     width: 100%;
   }

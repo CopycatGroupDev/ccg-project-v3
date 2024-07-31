@@ -34,7 +34,11 @@ export default function Comptoirs() {
     return <Default value={data}>
         <Header />
         <Intro />
-        <img src="/banners/Groupe 685.png" alt="" />
+        <img src="/banners/Groupe 685.png" alt="" style={{
+            maxWidth: "100%",
+            minHeight: '100px',
+            objectFit: "cover"
+        }} />
         <Text>
             <TitleWithBar>
                 <Title>Nos Comptoirs</Title>

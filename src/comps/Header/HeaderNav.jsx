@@ -84,13 +84,13 @@ export function NavLogo({ src }) {
 
 export default function HeaderNav() {
     return <Row>
-        <Col $w={2}>
+        <Col className="topcol" $w={2}>
             <NavLogo src={"logo/logo.png"} />
         </Col>
         <Col style={{"--overflow": "hidden"}} $w={10}>
             <Items />
         </Col>
-        <Col $w={2}>
+        <Col className="topcol" $w={2}>
             <BurgerMenu />
         </Col>
     </Row>

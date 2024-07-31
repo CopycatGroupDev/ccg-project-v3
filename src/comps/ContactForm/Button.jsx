@@ -10,6 +10,10 @@ const Button = styled.button`
   grid-column: span 2;
   width: 50%;
   justify-self: left;
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
 `;
 
 export default Button;

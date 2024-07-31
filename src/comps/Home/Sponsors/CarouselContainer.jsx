@@ -9,9 +9,8 @@ export default styled(motion.div)`
   padding: 1rem; /* tailwind p-4 */
   background-color: #ffffff; /* tailwind bg-white */
   aspect-ratio: 1/1;
-  height: 350px;
-
-  @media (min-width: 1024px) {
-    aspect-ratio: 16/9; /* tailwind lg:aspect-video */
+  @media (min-width: 640px) {
+    height: 350px;
   }
+  aspect-ratio: 16/9; /* tailwind lg:aspect-video */
 `;

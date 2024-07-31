@@ -26,5 +26,10 @@ const HeaderAppendix = styled.div`
         max-width: 1000px;
         margin: 0;
     }
+
+    @media screen and (max-width: 400px) {
+        zoom: ${({ longP }) => longP ? 0.6 : 0.75};
+        line-height: 1.5rem;
+    }
 `;
 export default HeaderAppendix;

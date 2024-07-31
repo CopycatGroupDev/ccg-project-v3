@@ -12,8 +12,8 @@ const Container = styled(C)`
   align-items: center;
   justify-content: center;
   width: 100%;
-  @media (max-width: 640px) {
-    height: 100vh;
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
   }
   scroll-snap-align: center;
   scroll-snap-stop: always;
@@ -31,8 +31,11 @@ const ContentWrapper = styled.div`
   width: 100%;
   padding: 10px 5px;
   gap: 1em;
-  &:nth-of-type(1) {
-    border-right: 2px solid #0061ad;
+
+  @media screen and (min-width: 640px) {
+    &:nth-of-type(1) {
+      border-right: 2px solid #0061ad;
+    }
   }
 
   @media (min-width: 1024px) {

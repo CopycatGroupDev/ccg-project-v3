@@ -29,7 +29,7 @@ const data = {
 export default function Boulogne() {
 
     return <Default value={data}>
-        <Header />
+        <Header longP={true} />
         <Desc
             horaires={horaires?.Boulogne}
             renseignements={renseignements?.Boulogne}

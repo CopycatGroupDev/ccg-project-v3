@@ -6,6 +6,11 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   width: 100%;
   padding: 0 3rem;
+
+  @media (max-width: 640px) {
+    padding: 0;
+  }
+    
   gap: 2rem;
   align-items: center;
 

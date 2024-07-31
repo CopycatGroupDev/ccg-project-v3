@@ -17,6 +17,10 @@ const ContentWrapper = styled.div`
     flex-direction: row;
   }
 
+  @media (max-width: 640px) {
+    padding: 0;
+  }
+
   & > div {
     width: 100%;
   }
@@ -29,6 +33,9 @@ const MotionDiv = styled(motion.div)`
   scroll-snap-align: center;
   scroll-snap-stop: always;
   height: 650px;
+  @media (max-width: 640px) {
+    height: min-content;
+  }
 `;
 
 const ifr = css`
@@ -43,7 +50,11 @@ const Img = styled.img`
   scrolling: no;
   margin: 0;
   object-fit: contain;
-  aspect-ratio: 604/710;`;
+  aspect-ratio: 604/710;
+
+  @media (max-width: 640px) {
+    height: min-content;
+  }`;
 
 const HomeContact = () => (
   <Container>

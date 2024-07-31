@@ -15,7 +15,7 @@ const contactForm = {
   Sèvres: [
     { Component: Input, $colSpan: false, placeholder: 'Nom', name: 'name' },
     { Component: Input, $colSpan: false, placeholder: 'Prénom', name: 'firstname' },
-    { Component: Input, $colSpan: false, placeholder: 'Numéro de téléphone', name: 'number', type: 'tel' },
+    { Component: Input, $colSpan: false, placeholder: 'Téléphone', name: 'number', type: 'tel' },
     { Component: Input, $colSpan: false, placeholder: 'Société', name: 'firm' },
     { Component: Input, $colSpan: true, placeholder: 'Votre email', name: 'mail', type: 'email' },
     { Component: Input, $colSpan: true, placeholder: 'Message', name: 'message' }
@@ -65,7 +65,7 @@ const contactForm = {
   Modal: [
     { Component: Input, $colSpan: false, placeholder: 'Nom', name: 'name' },
     { Component: Input, $colSpan: false, placeholder: 'Prénom', name: 'firstname' },
-    { Component: Input, $colSpan: false, placeholder: 'Numéro de téléphone', name: 'number' },
+    { Component: Input, $colSpan: false, placeholder: 'Téléphone', name: 'number' },
     { Component: Input, $colSpan: false, placeholder: 'Société', name: 'firm' },
     { Component: Input, $colSpan: true, placeholder: 'Votre email', name: 'mail' },
     { Component: Select, $colSpan: true, placeholder: 'Votre demande concernant ?', name: 'category' },

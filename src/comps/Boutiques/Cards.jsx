@@ -7,4 +7,6 @@ export default styled.div`
     align-items: stretch;
     flex-wrap: wrap;
     width: 100%;
+
+    @media screen and (max-width: 700px) { padding: 0 1.5em; }
 `;

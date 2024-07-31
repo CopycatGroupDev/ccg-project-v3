@@ -11,10 +11,11 @@ import { useContext } from "react";
 import { DefaultContext } from "../../wrappers/Default";
 import Container from "./HeaderContainer";
 
-export default function Header() {
+export default function Header({ longP }) {
     const { color, header : { bg, rows, logo, appendixRow } } = useContext(DefaultContext);
     return <Container>
         <Layout
+        longP={longP ?? false}
         $color={color}
         initial={{background: color}}
         animate={{backgroundImage: `linear-gradient(-175deg, #ededed 50%, ${color} 50%)`}}
@@ -23,10 +24,10 @@ export default function Header() {
             <Logo src={logo} alt="logo" {...animation} />
             <Text>
                 <Nav />
-                <TextZone rows={rows} color={color} {...animation} />
+                <TextZone className="textZone" rows={rows} color={color} {...animation} />
             </Text>
         </Layout>
-        {appendixRow && <Appendix $color={color}>
+        {appendixRow && <Appendix longP={longP ?? false} className="appendix" $color={color}>
             <motion.p {...animation}>{appendixRow}</motion.p>
         </Appendix>}
     </Container>;

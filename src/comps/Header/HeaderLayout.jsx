@@ -11,6 +11,27 @@ export const HeaderLayout = styled(motion.div)`
     justify-content: center;
     position: relative;
 
+    @media screen and (max-width: 400px) {
+        .topcol{
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .textZone {
+            zoom: ${({ longP }) => longP ? 0.6 : 0.75};
+            line-height: 1.5rem;
+        }
+        @media screen and (max-height: 500px) {
+            .textZone {
+                gap: 9px;
+            }
+        }
+        a {
+            white-space: nowrap;
+        }
+    }
+
     @media only screen and (max-height: 800px) and (orientation: landscape) {
         height: ${props => props.$height ?? '200vh'};
     }

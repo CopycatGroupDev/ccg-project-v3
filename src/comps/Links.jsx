@@ -35,7 +35,9 @@ const StyledLink = styled(Link)`
   background-color: ${({ $color }) => $color};
   border-radius: 1rem;
   width: 100%;
-  max-width: 33%;
+  @media (min-width: 768px) {
+    max-width: 33%; 
+  }
   display: grid;
   grid-template-rows: min-content;
   align-items: center;

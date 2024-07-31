@@ -5,6 +5,10 @@ import { colors } from "../../config/colors";
 
 const ContentWrapper = styled.div`
     padding: 0 3rem;
+
+    @media (max-width: 640px) {
+        padding: 0;
+    }
 `;
 
 const ContactForm = () => {

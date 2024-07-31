@@ -51,6 +51,10 @@ const Items = styled(Container)`
 	gap: 1em;
     padding-top: 1em;
     padding-bottom: 1em;
+
+	@media (max-width: 648px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
 `;
 const Item = styled.div`
 	display: flex;

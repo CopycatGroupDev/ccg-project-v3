@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default styled.div`
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    @media screen and (min-width: 700px) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     gap: 1rem;
     width: 100%;
     max-width: 1400px;
