@@ -1406,7 +1406,7 @@ p{
     max-width: 1340px;
 
     &>* {
-        --width: 50%;
+        width: 50%;
     }
 
     img{
