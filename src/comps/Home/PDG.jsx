@@ -83,7 +83,7 @@ export default () => (
   <Container>
     {[
       { name: 'Erwan HECAEN' , img: '/photos/pdg.svg', position: 'Fondateur et Expert Solutions Documentaires', email: "e.hecaen@copycatgroup.fr" },
-      { name: 'Pierre DE LOISNE' , img: '/photos/Groupe de masques 81.png', position: 'Associé et Expert Solutions Informatiques Bureautiques', email: "p.deloisne@copycatgroup.fr" },
+      { name: 'Pierre DE LOISNE' , img: '/photos/Groupe de masques 81.png', position: 'Associé et Expert Solutions Informatiques', email: "p.deloisne@copycatgroup.fr" },
     ].map(({ name, img, position, email }, i) => (
       <ContentWrapper key={i}>
         <ImgContainer>

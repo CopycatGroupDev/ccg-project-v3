@@ -16,6 +16,10 @@ const NavLayout = styled.div`
         line-height: 2rem;
     }
 
+    a:hover {
+        box-shadow: 0 0 0 #0000 !important;
+    }
+
     ul {
         display: flex;
         flex-wrap: wrap;
