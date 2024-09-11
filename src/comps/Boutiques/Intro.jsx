@@ -16,7 +16,7 @@ export default () => <Text>
     <article>
         <Title>Notre concept</Title>
         <p>
-            Découvrez Copycat à Sèvres et Boulogne, vos comptoirs idéaux pour les fournitures de bureau et les services d'impression. Nos équipes dévouées offrent des produits de qualité et des solutions documentaires personnalisées pour répondre à tous vos besoins professionnels.
+            Découvrez Copycat à Sèvres et Boulogne, vos comptoirs idéaux pour les fournitures de bureau et les services d'impression. Nos équipes dévouées offrent des produits de qualité et des solutions documentaires personnalisées pour répondre à tous vos besoins de particuliers et professionnels.
         </p>
     </article>
 </Text>

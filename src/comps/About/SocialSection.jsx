@@ -106,15 +106,15 @@ const SocialSection = () => {
 
         <SocialLinks>
           
-          <SocialLink to={'https://www.instagram.com/copycat_group/'}>
+          <SocialLink to={'https://www.instagram.com/copycat_group/'} target={'_blank'}>
             <SocialImage src="/extLogos/Groupe 690.png" inverted alt="Instagram" />
             <SocialSpan>CopyCat Group</SocialSpan>
           </SocialLink>
-          <SocialLink to={'https://www.facebook.com/copycat.groupe/'}>
+          <SocialLink to={'https://www.facebook.com/copycat.groupe/'} target={'_blank'}>
             <SocialImage src="/extLogos/Icon metro-facebook.png" alt="Facebook" />
             <SocialSpan>copycat_group</SocialSpan>
           </SocialLink>
-          <SocialLink to={'https://fr.linkedin.com/company/copycat-group'}>
+          <SocialLink to={'https://fr.linkedin.com/company/copycat-group'} target={'_blank'}>
             <SocialImage src="/extLogos/Icon metro-linkedin.png" inverted alt="LinkedIn" />
             <SocialSpan>CopyCat Group</SocialSpan>
           </SocialLink>

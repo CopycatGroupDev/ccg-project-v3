@@ -31,8 +31,8 @@ const contactForm = {
         'Par les réseaux sociaux',
         'Par internet',
         'Par une connaissance',
-        'Par notre comptoir Copycat Sèvres',
-        'Par notre comptoir Copycat Boulogne',
+        'Par notre comptoir CopyCat Sèvres',
+        'Par notre comptoir CopyCat Boulogne',
         'Autres'
       ].map((option) => <option key={option}>{option}</option>) },
     { Component: Input, $colSpan: true, placeholder: 'Ville', name: 'city' },
