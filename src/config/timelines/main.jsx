@@ -1,36 +1,8 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-
-const ImgContainer = styled.div`
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  padding-top: 20px;
-
-  img {
-    height: 40px;
-    width: auto;
-    min-width: 40px;
-    object-fit: contain;
-  }
-`;
-
-const labsImgs = [
-	['/extLogos/php.png', '/extLogos/js.png', '/extLogos/wp.png', '/extLogos/github.svg', '/extLogos/gan.png'],
-	['/extLogos/Photoshop.png', '/extLogos/InDesign.png', '/extLogos/Illustrator.png', '/extLogos/Adobe XD.png'],
-	['/extLogos/linkedin.png', '/extLogos/facebook.svg', '/extLogos/instagram.svg', '/extLogos/R (1).png'],
-];
-
-const animImg = (img, key) => (
-	<motion.img
-	  key={key}
-	  src={img}
-	  initial={{ opacity: 0, x: 100 }}
-	  transition={{ duration: 0.5, delay: key * 0.25 }}
-	  whileInView={{ opacity: 100, x: 0 }}
-	  viewport={{ once: true }}
-	/>
-);
+import animImg from "./animImg";
+import labsImgs from "./labsImg";
+import ImgContainer from "./ImgContainer";
 
 export default {
 	shop: [

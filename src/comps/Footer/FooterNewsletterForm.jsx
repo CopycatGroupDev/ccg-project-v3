@@ -15,7 +15,7 @@ export default () => {
 	return <FooterNewsletterForm onSubmit={e => {
 		e.preventDefault();
 		socket.emit('newsletter:signup', e.target.mail.value, () => {});
-		//console.log("Submit");
+		console.log("Submit", e.target.mail.value);
 	}}>
 		<Input type="email" name="mail" placeholder='Votre email' required/>
 		<Input type="submit" value="Envoyer"/>

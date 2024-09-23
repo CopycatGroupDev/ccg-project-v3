@@ -1,24 +1,7 @@
-// CommonJS
-const cors = require('cors');
-const origin = require('./originsIP.js');
+import cors from 'cors';
 
-module.exports.func = cors;
-
-module.exports.options = {
-    credentials: true,
-    origin,
-    methods: ["GET", "POST"],
-    optionsSuccessStatus: 200,
-};
-
-// Old code
-//import cors from "cors";
-//import origin from "./originsIP.js";
-//export default cors;
-
-//export const options = {
-//    credentials: true,
-//    origin,
-//    methods: ["GET", "POST"],
-//    optionsSuccessStatus: 200,
-//};
+export const corsOptions = {
+    origin: [ 'http://localhost:5173', 'http://127.0.0.1:5173', 'http://localhost', 'http://127.0.0.1' ],
+    credentials: true
+}
+export default cors(corsOptions);
