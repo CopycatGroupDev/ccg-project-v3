@@ -1,5 +1,4 @@
 import { io } from '../config/server.js';
-import axios from 'axios';
 
 export default (socket) => {
 	socket.leaveAll();
