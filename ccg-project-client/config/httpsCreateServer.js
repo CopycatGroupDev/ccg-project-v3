@@ -1,5 +1,5 @@
 import app from './app.js';
-import dotenv from 'dotenv'; // https://www.npmjs.com/package/dotenv
+import dotenv from 'dotenv';
 import fs from 'fs';
 
 dotenv.config();
@@ -10,5 +10,5 @@ const options = JSON.parse(dev_mode) ? {} : {
     cert:fs.readFileSync(ssl_cert)
 };
 
-import { createServer } from 'http';
+import { createServer } from 'https';
 export default createServer(options, app);
