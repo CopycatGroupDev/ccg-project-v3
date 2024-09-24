@@ -32,7 +32,8 @@ const Form = ({ formType, title, motionCond = true, color, options = {}, selecte
     const inputs = [["URL", window.location.href], ...formFields.map(({ placeholder, name }) => [placeholder, e.target[name].value])];
     const mailText = inputs.map(([placeholder, value]) => `${placeholder}: ${value}`).join('\n');
     //emailjs.send('service_o6semg5', 'template_fngu4h2', { color, message: mailText, to_name: 'Erwan' }, '8Rs9RvEbWiGOIy4pj');
-    emailjs.send('service_chpg77d', 'template_fngu4h2', { color, message: mailText, to_name: 'Erwan' }, '8Rs9RvEbWiGOIy4pj');
+    //emailjs.send('service_chpg77d', 'template_fngu4h2', { color, message: mailText, to_name: 'Erwan' }, '8Rs9RvEbWiGOIy4pj');
+    emailjs.send('service_vxg3w2p', 'template_phpkqbm', { color, message: mailText, to_name: 'Erwan' }, 'lY6gm08EUXQdiwdgh');
     alert('Message envoyé');
   }
 
