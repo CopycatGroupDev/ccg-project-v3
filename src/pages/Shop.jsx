@@ -3,8 +3,8 @@ import Default from "../wrappers/Default";
 import Header from '../comps/Header/Main';
 import { Timeline } from "../comps/Timeline";
 import { colors } from "../config/colors";
-import Links from "../comps/Links";
-import timelines from "../config/timelines/main";
+import Links from "../comps/Links/Main";
+import timelines from "../comps/timelines/main";
 
 const data = {
     title: "Shop - Copycat Group",

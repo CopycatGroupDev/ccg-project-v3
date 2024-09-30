@@ -7,7 +7,7 @@ import List from "../comps/Solutions/List/Main";
 import { AppContext } from "../wrappers/Provider";
 import { useContext } from "react";
 import solutionsList from "../config/solutionsList";
-import timelines from "../config/timelines/main";
+import timelines from "../comps/timelines/main";
 import Form from "../comps/ContactForm/Form";
 
 const data = {

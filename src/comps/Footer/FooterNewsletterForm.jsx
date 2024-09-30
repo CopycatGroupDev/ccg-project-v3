@@ -10,11 +10,11 @@ const FooterNewsletterForm = styled.form`
 `
 
 export default () => {
-	const { socket } = useContext(SocketContext);
+	const socket = useContext(SocketContext);
 
 	return <FooterNewsletterForm onSubmit={e => {
 		e.preventDefault();
-		socket.emit('newsletter:signup', e.target.mail.value, () => {});
+		socket.emit('mailingList/add', e.target.mail.value, () => {});
 		console.log("Submit", e.target.mail.value);
 	}}>
 		<Input type="email" name="mail" placeholder='Votre email' required/>

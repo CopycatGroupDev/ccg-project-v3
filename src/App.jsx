@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { AppContext } from './wrappers/Provider';
 import GStyle from './comps/GStyle';
+import axios from 'axios';
 
 export default function App() {
     const context = useContext(AppContext);

@@ -12,9 +12,11 @@ import Contact from "../pages/Contact";
 import RSE from "../pages/RSE";
 import Mentions from "../pages/Mentions";
 import Confi from "../pages/Confi";
+import Admin from "../pages/Admin";
 
 const routes = [
     {path: '/', element: <Home />},
+    {path: '/admin', element: <Admin />},
     {path: '/solutions', element: <Solutions />},
     {path: '/shop', element: <Shop />},
     {path: '/print', element: <Print />},

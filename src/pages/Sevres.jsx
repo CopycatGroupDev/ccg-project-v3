@@ -7,7 +7,7 @@ import { colors } from "../config/colors";
 import ContactSection from "../comps/Boutiques/ContactSection/Main";
 import Services from "../comps/Boutiques/ServicesSection/Main";
 import services from "../config/services";
-import Links from "../comps/Links";
+import Links from "../comps/Links/Main";
 import { HeaderButton } from "../comps/Header/HeaderButton";
 
 const button = <HeaderButton key={btoa(Math.random())} color={colors.sevres} to={'/contact'}>

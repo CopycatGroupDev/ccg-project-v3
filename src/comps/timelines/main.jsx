@@ -9,7 +9,7 @@ export default {
 		['Bureautique', '/logo/Groupe 810.png', 'bur', <>{'Fournitures, imprimantes domestiques, cartouches...'}</>, 'Je suis intéressé'],
             ['Informatique & Multimédia', '/logo/Groupe 811.png', 'inf', <>{'Ordinateur, Mac, tablette, écran interactif, accessoires...'}</>, 'Je suis intéressé'],
             ['Services', '/logo/Groupe 812.png', 'srv', <>{'Réparation informatique, installation de licences, transfert et recuperation de données...'}</>, 'Je suis intéressé'],
-            ['Domiciliation', '/logo/Groupe 810.png', 'dom', <>{'Domiciliation d\'entreprise, transfert de courriers, archives...'}</>, 'Je suis intéressé']
+            ['Domiciliation', '/logo/Groupe 837.png', 'dom', <>{'Domiciliation d\'entreprise, transfert de courriers, archives...'}</>, 'Je suis intéressé']
 	],
 	solutions: [
 		['Bureautique', '/logo/Groupe 806.png', 'bur', <>{'Vente et location d\'imprimante'}<br />{'petit et grand format, laser ou jet d\'encre...'}</>, 'Je suis intéressé'],

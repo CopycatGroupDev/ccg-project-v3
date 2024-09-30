@@ -8,12 +8,15 @@ import { ImLinkedin } from "react-icons/im";
 import { FooterColumns as Columns, FooterColumn as Column } from "./FooterColumns";
 import { Title } from "../Title";
 import FooterNewsletterForm from "./FooterNewsletterForm";
+import { useContext } from "react";
+import { AppContext } from "../../wrappers/Provider";
 
 export default function Footer() {
+    const { links } = useContext(AppContext);
     const icons = [
-        { path: 'https://www.facebook.com/copycat.groupe/', Icon: ImFacebook2 },
-        { path: 'https://www.instagram.com/copycat.groupe/', Icon: BsInstagram },
-        { path: 'https://fr.linkedin.com/company/copycat-group', Icon: ImLinkedin },
+        { path: links?.facebook, Icon: ImFacebook2 },
+        { path: links?.instagram, Icon: BsInstagram },
+        { path: links?.linkedin, Icon: ImLinkedin },
     ]
     
     return <Style className="footer">
@@ -50,7 +53,7 @@ export default function Footer() {
             <Bottom>
                 <div>Copyright : Copycat Group 2021</div>
                 <div>
-                    {icons.map(({ path, Icon }) => <Link to={path} key={path} target="_blank">
+                    {icons.map(({ path, Icon }, i) => <Link to={path} key={i} target="_blank">
                         <Icon size={24} />
                     </Link>)}
                 </div>
