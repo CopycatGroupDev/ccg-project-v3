@@ -1,6 +1,7 @@
 import { io } from '../config/server.js';
 import links from '../models/links.js';
 import mailing_list from '../models/mailing_list.js';
+import users from '../models/users.js';
 import jsonData from './jsonData.js';
 
 export default async (socket) => {
@@ -37,6 +38,26 @@ export default async (socket) => {
 	socket.on('mailingList/delete', async mail => {
 		await mailing_list.deleteOne({ mail });
 		socket.emit('mailingList/read', (await mailing_list.find()).map(link => link.mail));
+	});
+
+	socket.on('user/read', async (id, callback) => {
+		try {
+			const user = await users.findById(id);
+			callback(user);
+		} catch (error) {
+			console.log(error);
+			callback({});
+		}
+	});
+
+	socket.on('users/read', async callback => {
+		try {
+			const users_ = await users.find();
+			callback(users_);
+		} catch (error) {
+			console.log(error);
+			callback({});
+		}
 	});
 
 	socket.on('connect', () => {

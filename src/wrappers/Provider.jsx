@@ -32,8 +32,12 @@ export default function ({ children }) {
     const [links, setLinks] = useState({});
     const [mailingList, setMailingList] = useState({});
     const [cookies, setCookies] = useState({});
+    const [init, setInit] = useState(false);
 
-    const reloadCookies = () => axios.post(`http://${window.location.hostname}/api/cookies`, {}, { withCredentials: true }).then(({ data : r }) => setCookies(r));
+    const reloadCookies = () => axios.post(`http://${window.location.hostname}/api/cookies`, {}, { withCredentials: true }).then(({ data : r }) => {
+        setCookies(r);
+        setInit(true);
+    });
     const socket = useContext(SocketContext);
     useEffect(() => {
         socket.on('links/read', setLinks);
@@ -45,7 +49,7 @@ export default function ({ children }) {
         };
     }, [socket]);
 
-    return <AppContext.Provider value={{ modal, toast, routes, title, nav, style, links, mailingList, cookies, reloadCookies }}>
+    return <AppContext.Provider value={{ modal, toast, routes, title, nav, style, links, mailingList, cookies, reloadCookies, init }}>
         {children}
     </AppContext.Provider>
 }
