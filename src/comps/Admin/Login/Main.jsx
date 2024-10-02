@@ -9,7 +9,7 @@ export default function() {
             <h1>Login</h1>
             <form onSubmit={e => {
                 e.preventDefault();
-                axios.post(`http://${window.location.hostname}/api/login`, {
+                axios.post(`${window.location.protocol}//${window.location.hostname}/api/login`, {
                     username: e.target.username.value,
                     password: e.target.password.value
                 }, { withCredentials: true }).then(({ data : r }) => {

@@ -34,7 +34,7 @@ export default function ({ children }) {
     const [cookies, setCookies] = useState({});
     const [init, setInit] = useState(false);
 
-    const reloadCookies = () => axios.post(`http://${window.location.hostname}/api/cookies`, {}, { withCredentials: true }).then(({ data : r }) => {
+    const reloadCookies = () => axios.post(`${window.location.protocol}//${window.location.hostname}/api/cookies`, {}, { withCredentials: true }).then(({ data : r }) => {
         setCookies(r);
         setInit(true);
     });
