@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../wrappers/Provider";
 import axios from 'axios';
 import { SocketContext } from "../wrappers/Socket";
-import { LinksSettings, Login, MailingListSettings, QRCode, Users } from "../comps/Admin/Index";
+import { Contact, LinksSettings, Login, MailingListSettings, QRCode, Users } from "../comps/Admin/Index";
 
 export default function () {
     const { cookies, reloadCookies, init } = useContext(AppContext);
@@ -18,7 +18,8 @@ export default function () {
         <h1>Admin</h1>
         {!cookies?.["ccg-user"] ? <Login /> : <>
             <button onClick={() => axios.post(`${window.location.protocol}//${window.location.hostname}/api/logout`, {}, { withCredentials: true }).then(() => reloadCookies())}>Déconnexion</button>
-            {usrData.admin && <Users />}
+            {/* {usrData.admin && <Users />} */}
+            <Contact />
             <LinksSettings />
             <MailingListSettings />
             <QRCode />

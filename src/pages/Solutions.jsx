@@ -8,7 +8,7 @@ import { AppContext } from "../wrappers/Provider";
 import { useContext } from "react";
 import solutionsList from "../config/solutionsList";
 import timelines from "../comps/timelines/main";
-import Form from "../comps/ContactForm/Form";
+import Form from "../comps/ContactForm/Main";
 
 const data = {
     title: "Solutions - Copycat Group",

@@ -6,7 +6,7 @@ import { colors } from "../config/colors";
 import timelines from "../comps/timelines/main";
 import { useContext } from "react";
 import { AppContext } from "../wrappers/Provider";
-import Form from "../comps/ContactForm/Form";
+import Form from "../comps/ContactForm/Main";
 
 const data = {
     title: "Labs - Copycat Group",

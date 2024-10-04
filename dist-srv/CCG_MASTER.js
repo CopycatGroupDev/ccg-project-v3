@@ -1,4 +1,3 @@
-import crypt from "./config/crypt.js";
 import { server, serverSecure } from "./config/server.js";
 import dotenv from 'dotenv'
 dotenv.config();

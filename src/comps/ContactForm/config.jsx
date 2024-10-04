@@ -1,17 +1,8 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
+import Input from "./Input";
+import Select from "./Select";
+import Textarea from "./Textarea";
 
-const css_ = css`
-  width: 100%;
-  border: 1px solid #d1d5db; /* border-gray-300 */
-  font-size: 16px;
-  border-radius: 0.25rem;
-`;
-const Input = styled.input`${css_}`;
-const Select = styled.select`${css_}`;
-const Textarea = styled.textarea`${css_}`;
-
-const contactForm = {
+export default {
   Sèvres: [
     { Component: Input, $colSpan: false, placeholder: 'Nom', name: 'name' },
     { Component: Input, $colSpan: false, placeholder: 'Prénom', name: 'firstname' },
@@ -72,5 +63,3 @@ const contactForm = {
     { Component: Textarea, $colSpan: true, placeholder: 'Message', name: 'message' }
   ]
 };
-
-export default contactForm;

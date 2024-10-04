@@ -1,60 +1,9 @@
-import styled, { css } from 'styled-components';
-import { motion } from 'framer-motion';
-import { Container } from './../Container';
-import ContactForm from '../ContactForm/Form';
-import { colors } from '../../config/colors';
-
-const ContentWrapper = styled.div`
-  max-width: 1340px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 0 3rem;
-  gap: 2rem;
-  align-items: center;
-
-  @media (min-width: 1024px) {
-    flex-direction: row;
-  }
-
-  @media (max-width: 640px) {
-    padding: 0;
-  }
-
-  & > div {
-    width: 100%;
-  }
-`;
-
-const MotionDiv = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
-  height: 650px;
-  @media (max-width: 640px) {
-    height: min-content;
-  }
-`;
-
-const ifr = css`
-  
-`;
-
-const Iframe = styled.iframe` ${ifr} `;
-const Img = styled.img`
-  width: 100%;
-  height: 100%;
-  border: none;
-  scrolling: no;
-  margin: 0;
-  object-fit: contain;
-  aspect-ratio: 604/710;
-
-  @media (max-width: 640px) {
-    height: min-content;
-  }`;
+import { Container } from '../../Container';
+import ContactForm from '../../ContactForm/Main';
+import { colors } from '../../../config/colors';
+import ContentWrapper from './ContentWrapper';
+import MotionDiv from './MotionDiv';
+import Img from './Img';
 
 const HomeContact = () => (
   <Container>

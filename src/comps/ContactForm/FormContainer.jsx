@@ -1,6 +1,28 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import { FormContext } from "./Main";
+import formMap from './formMap';
+import FormWrapper from './FormWrapper';
+import FormTitle from './FormTitle';
+import Button from './Button';
+import Submit from './submit';
 
-const FormContainer = styled.div`
+export default styled.div.attrs(function() {
+  //const { title, desc, formFields, color }
+  const formCtxt = useContext(FormContext);
+  const { submit } = Submit();
+
+  return {
+    children: <>
+      {formCtxt?.title?.length > 0 && <FormTitle $color={formCtxt?.color}>{formCtxt?.title}</FormTitle>}
+      {formCtxt?.desc && <p style={{ gridColumn: '1 / -1' }}>{formCtxt?.desc}</p>}
+      <FormWrapper onSubmit={submit}>
+        {formCtxt?.formFields?.map(formMap)}
+        <Button type="submit">Me faire rappeler</Button>
+      </FormWrapper>
+    </>
+  }
+})`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -18,5 +40,3 @@ const FormContainer = styled.div`
     border-radius: 0;
   }
 `;
-
-export default FormContainer;

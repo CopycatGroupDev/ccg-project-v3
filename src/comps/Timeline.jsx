@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { AppContext } from '../wrappers/Provider';
-import Form from './ContactForm/Form';
+import Form from './ContactForm/Main';
 import { colors } from '../config/colors';
 import { Container as C } from './Container';
 

@@ -1,8 +1,10 @@
+import emailjs from '@emailjs/browser';
 import { io } from '../config/server.js';
 import links from '../models/links.js';
 import mailing_list from '../models/mailing_list.js';
 import users from '../models/users.js';
 import jsonData from './jsonData.js';
+import contact from '../models/contact.js';
 
 export default async (socket) => {
 	socket.leaveAll();
@@ -54,6 +56,31 @@ export default async (socket) => {
 		try {
 			const users_ = await users.find();
 			callback(users_);
+		} catch (error) {
+			console.log(error);
+			callback({});
+		}
+	});
+
+	socket.on('contact/submit', async (color, href, data, callback) => {
+		try {
+			console.log({ color, href, ...Object.fromEntries(data.map(({ name, value }) => [name, value])) });
+
+			const newContact = new contact({ color, href, ...Object.fromEntries(data.map(({ name, value }) => [name, value])) });
+			await newContact.save();
+			//const inputs = [["URL", href], ...data?.map(({ placeholder, value }) => [placeholder, value])];
+            //const message = inputs.map(([placeholder, value]) => `${placeholder}: ${value}`).join('\n');
+			//emailjs.send('service_vxg3w2p', 'template_phpkqbm', { color, message, to_name: 'Erwan' }, 'lY6gm08EUXQdiwdgh');
+			callback(true);
+		} catch (error) {
+			console.log(error);
+			callback(false);
+		}
+	});
+	socket.on('contacts/read', async callback => {
+		try {
+			const contacts = await contact.find();
+			callback(contacts);
 		} catch (error) {
 			console.log(error);
 			callback({});

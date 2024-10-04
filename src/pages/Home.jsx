@@ -4,7 +4,7 @@ import Header from '../comps/Header/Main';
 import Services from "../comps/Home/HomeServices";
 import PDG from "../comps/Home/PDG";
 import Sponsors from "../comps/Home/Sponsors/Main";
-import HomeContact from "../comps/Home/HomeContact";
+import HomeContact from "../comps/Home/HomeContact/Main";
 import { colors } from "../config/colors";
 import Intro from "../comps/Home/HomeIntro";
 

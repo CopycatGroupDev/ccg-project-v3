@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Container } from "../Container";
-import ContactForm_ from '../ContactForm/Form';
+import ContactForm_ from '../ContactForm/Main';
 import { colors } from "../../config/colors";
 
 const ContentWrapper = styled.div`

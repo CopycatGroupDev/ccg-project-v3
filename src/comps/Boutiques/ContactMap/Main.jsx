@@ -1,4 +1,4 @@
-import Form from "../../ContactForm/Form";
+import Form from "../../ContactForm/Main";
 import { Container } from "../../Container";
 import ContentWrapper from "../../ContentWrapper";
 import { colors } from "../../../config/colors";
