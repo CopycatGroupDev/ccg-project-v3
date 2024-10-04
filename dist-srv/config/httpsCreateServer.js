@@ -5,7 +5,7 @@ import fs from 'fs';
 
 dotenv.config();
 const { dev_mode, ssl_key, ssl_cert } = process.env;
-console.log(path.resolve(import.meta.url, ssl_key));
+console.log(path.resolve(__dirname, ssl_key));
 console.log(dev_mode, typeof dev_mode);
 const options = JSON.parse(dev_mode) ? {} : {
     key:fs.readFileSync(ssl_key),
