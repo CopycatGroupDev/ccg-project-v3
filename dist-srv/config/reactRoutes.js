@@ -12,7 +12,7 @@ export default [
 	'/boulogne',
 	'/mentions',
 	'/confidentialit%C3%A9',
-	'/admin',
+	'/admin/*',
 ]
 
 export const toRedirect = [
