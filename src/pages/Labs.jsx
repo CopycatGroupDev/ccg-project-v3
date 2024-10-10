@@ -3,7 +3,7 @@ import Default from "../wrappers/Default";
 import Header from '../comps/Header/Main';
 import { Timeline } from "../comps/Timeline";
 import { colors } from "../config/colors";
-import timelines from "../comps/timelines/main";
+import timelines from "../config/timelines/main";
 import { useContext } from "react";
 import { AppContext } from "../wrappers/Provider";
 import Form from "../comps/ContactForm/Main";

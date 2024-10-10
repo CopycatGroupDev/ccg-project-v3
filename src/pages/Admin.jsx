@@ -3,6 +3,21 @@ import { AppContext } from "../wrappers/Provider";
 import axios from 'axios';
 import { SocketContext } from "../wrappers/Socket";
 import { Contact, LinksSettings, Login, MailingListSettings, QRCode, Users } from "../comps/Admin/Index";
+import { Route, Routes } from "react-router-dom";
+import routes from "../comps/Admin/Dashboard/routes";
+import Dashboard from "../comps/Admin/Dashboard/Main";
+import { createGlobalStyle } from "styled-components";
+
+const BodyModifier = createGlobalStyle`
+    html, body, #root {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+    }
+    
+    *{ box-sizing: border-box; }
+`;
 
 export default function () {
     const { cookies, reloadCookies, init } = useContext(AppContext);
@@ -15,14 +30,16 @@ export default function () {
     }, [cookies?.["ccg-user"], init]);
 
     if (init) return (<>
-        <h1>Admin</h1>
-        {!cookies?.["ccg-user"] ? <Login /> : <>
-            <button onClick={() => axios.post(`${window.location.protocol}//${window.location.hostname}/api/logout`, {}, { withCredentials: true }).then(() => reloadCookies())}>Déconnexion</button>
-            {/* {usrData.admin && <Users />} */}
-            <Contact />
-            <LinksSettings />
-            <MailingListSettings />
-            <QRCode />
-        </>}
+        <BodyModifier />
+        {!cookies?.["ccg-user"] ?
+            <Login /> :
+            <Dashboard>
+                <Routes>
+                    {/* <button onClick={() => axios.post(`${window.location.protocol}//${window.location.hostname}/api/logout`, {}, { withCredentials: true }).then(() => reloadCookies())}>Déconnexion</button> */}
+                    {/* {usrData.admin && <Users />} */}
+                    {routes.map(({ path, element }, i) => <Route key={i} path={path} element={element} />)}
+                </Routes>
+            </Dashboard>
+        }
     </>)
 }

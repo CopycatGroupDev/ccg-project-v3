@@ -1,6 +1,6 @@
-import Input from "./Input";
-import Select from "./Select";
-import Textarea from "./Textarea";
+import Input from "../comps/ContactForm/Input";
+import Select from "../comps/ContactForm/Select";
+import Textarea from "../comps/ContactForm/Textarea";
 
 export default {
   Sèvres: [

@@ -7,10 +7,10 @@ import List from "../comps/Solutions/List/Main";
 import { AppContext } from "../wrappers/Provider";
 import { useContext } from "react";
 import solutionsList from "../config/solutionsList";
-import timelines from "../comps/timelines/main";
+import timelines from "../config/timelines/main";
 import Form from "../comps/ContactForm/Main";
 
-const data = {
+let data = {
     title: "Solutions - Copycat Group",
     color: colors.solutions,
     header : {
@@ -41,7 +41,9 @@ export default function Solutions() {
             Demander une expertise
         </HeaderButton>
 
-    return <Default value={{ ...data, header : { ...data.header, rows : [...data.header.rows, button] }}}>
+    data = { ...data, header : { ...data.header, rows : [...data.header.rows, button] }};
+
+    return <Default value={data}>
         <Header />
         <Timeline color={colors.solutions} list={timelines.solutions} />
         <List solutions={solutionsList.solutions} />

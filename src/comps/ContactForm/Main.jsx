@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { motion } from 'framer-motion';
-import contactForm from './config';
+import contactForm from '../../config/forms';
 import { useSearchParams } from 'react-router-dom'
 import motionProps from './motionProps';
 import FormContainer from './FormContainer';

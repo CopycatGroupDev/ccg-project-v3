@@ -4,7 +4,7 @@ import Header from '../comps/Header/Main';
 import { Timeline } from "../comps/Timeline";
 import { colors } from "../config/colors";
 import Links from "../comps/Links/Main";
-import timelines from "../comps/timelines/main";
+import timelines from "../config/timelines/main";
 
 const data = {
     title: "Shop - Copycat Group",

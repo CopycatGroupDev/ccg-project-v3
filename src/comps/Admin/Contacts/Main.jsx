@@ -3,6 +3,11 @@ import { SocketContext } from "../../../wrappers/Socket";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { colors } from "../../../config/colors";
+import Grid from "../Grid";
+import Box from "../Box";
+import TableContainer from "../TableContainer";
+import Table from "../Table";
+import Button from "../Button";
 
 export default function() {
     const socket = useContext(SocketContext);
@@ -13,7 +18,7 @@ export default function() {
     }, [socket]);
 
     const labels = {
-        color: 'Couleur',
+        //color: 'Couleur',
         href: 'URL',
         name: 'Nom',
         firstname: 'Prénom',
@@ -31,7 +36,27 @@ export default function() {
     return <>
         <h1>Contacts</h1>
 
-        <Grid>
+        <TableContainer>
+            <Table style={{ maxWidth: '100%', textAlign: 'left' }}>
+                <thead>
+                    <tr style={{ background: "#eee0" }}>
+                        {Object.entries(labels).map(([k, v]) => <th key={k}>{v}</th>)}
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {contacts.toSorted((a, b) => new Date(b.date) - new Date(a.date)).map(contact => {
+                        const url = new URL(contact.href);
+                        return <tr key={contact._id} style={{ background: colors[url.pathname.split('/').slice(-1)[0]] ?? colors.default, color: "#fffb" }}>
+                            {Object.entries(labels).map(([k, v]) => <td key={k}>{k === 'date' ? new Date(contact?.[k]).toLocaleString() : contact?.[k]}</td>)}
+                            <td><Button type="button" onClick={() => socket.emit('contacts/delete', contact._id)}>X Supprimer</Button></td>
+                        </tr>
+                    })}
+                </tbody>
+            </Table>
+        </TableContainer>
+
+        {/* <Grid>
         {contacts.toSorted((a, b) => new Date(b.date) - new Date(a.date)).map(contact => {
             const url = new URL(contact.href);
 
@@ -42,29 +67,9 @@ export default function() {
                     <b>{labels[k] || k} : </b>
                     {k === 'href' ? <Link to={v}>{v}</Link> : k === 'date' ? new Date(v).toLocaleString() : k === 'number' ? <a href={`tel:${v}`}>{v}</a> : k === 'mail' ? <a href={`mailto:${v}`}>{v}</a> : v}
                 </div>)}
-                {/* <button type="button" onClick={() => socket.emit('contacts/delete', contact._id)}>Supprimer</button> */}
+                {<button type="button" onClick={() => socket.emit('contacts/delete', contact._id)}>Supprimer</button>}
             </Box>
         })}
-        </Grid>
+        </Grid> */}
     </>;
 }
-
-const Box = styled.div`
-    padding: 2rem;
-    border-radius: 0.5rem;
-    margin-bottom: 0.5rem;
-    background-color: ${({ $bgColor }) => $bgColor ?? '#0061ad'};
-    box-shadow: 0 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
-    aspect-ratio: 1;
-    height: fit-content;
-    overflow: auto;
-    a {
-        color: white;
-    }
-`;
-
-const Grid = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-`

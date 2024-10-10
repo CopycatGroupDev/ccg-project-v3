@@ -16,7 +16,7 @@ import Admin from "../pages/Admin";
 
 const routes = [
     {path: '/', element: <Home />},
-    {path: '/admin', element: <Admin />},
+    {path: '/admin/*', element: <Admin />},
     {path: '/solutions', element: <Solutions />},
     {path: '/shop', element: <Shop />},
     {path: '/print', element: <Print />},

@@ -6,9 +6,7 @@ import reactRoutes, { toRedirect } from './reactRoutes.js';
 export default [
 	...reactRoutes.map(path => ({ path, method : 'get', action : react, })),
 	...toRedirect.map(({ oldPath, newPath }) => ({ path : oldPath, method : 'get', action : (req, res) => res.redirect(newPath), })),
-	{ path : '/api/cookies', method : 'post', action : async (req, res) => {
-		res.send(req.cookies);
-	}},
+	{ path : '/api/cookies', method : 'post', action : async (req, res) => { res.send(req.cookies); }},
 	{ path : '/api/login', method : 'post', action : async (req, res) => {
 		const { username, password } = req.body;
 		const user = await users.findOne({ username, password : crypt(password) });

@@ -6,7 +6,7 @@ import { Timeline } from "../comps/Timeline";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link as Link_ } from "react-router-dom";
-import timelines from "../comps/timelines/main";
+import timelines from "../config/timelines/main";
 import Links from "../comps/Links/Main";
 
 const data = {
