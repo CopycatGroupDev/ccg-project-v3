@@ -9,16 +9,15 @@ const Container2 = styled(C)`
     text-align: center;
     max-width: 1340px;
 
-    &>* {
-        width: 50%;
-    }
-
     img{
         object-fit: cover;
     }
     
     @media (min-width: 1024px) {
         flex-direction: row;
+        &>* {
+            width: 50%;
+        }
     }
 `;
 

@@ -53,7 +53,6 @@ export default function Sevres() {
             page={"Sèvres"}
             mapUrl="https://maps.google.com/maps?q=copycat%20sevre&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
             color={colors.sevres} />
-        <style>{` h1 { padding: 0 1em; overflow: hidden !important; } `}</style>
     </Default>
 }
 
