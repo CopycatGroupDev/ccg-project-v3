@@ -12,7 +12,7 @@ export default function() {
         submit : (e) => {
             e.preventDefault();
             const callback = () => {
-                const inputs = [["URL", window.location.href], ...formCtxt?.formFields?.map(({ placeholder, value }) => [placeholder, value])];
+                const inputs = [["URL", window.location.href], ...formCtxt?.formFields?.map(({ placeholder, name }) => [placeholder, e.target[name].value])];
                 const message = inputs.map(([placeholder, value]) => `${placeholder}: ${value}`).join('\n');
                 emailjs.send('service_vxg3w2p', 'template_phpkqbm', { color, message, to_name: 'Erwan' }, 'lY6gm08EUXQdiwdgh');
                 alert('Message envoyé');
