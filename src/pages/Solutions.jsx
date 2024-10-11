@@ -23,10 +23,7 @@ let data = {
     }
 }
 
-export default function Solutions() {
-    const { modal } = useContext(AppContext);
-
-    const button = <HeaderButton
+const button = <HeaderButton
         key={btoa(Math.random())}
         color={colors.solutions}
         onClick={() => modal.open(
@@ -41,9 +38,10 @@ export default function Solutions() {
             Demander une expertise
         </HeaderButton>
 
-    data = { ...data, header : { ...data.header, rows : [...data.header.rows, button] }};
+export default function Solutions() {
+    const { modal } = useContext(AppContext);
 
-    return <Default value={data}>
+    return <Default value={{ ...data, header : { ...data.header, rows : [...data.header.rows, button] }}}>
         <Header />
         <Timeline color={colors.solutions} list={timelines.solutions} />
         <List solutions={solutionsList.solutions} />
