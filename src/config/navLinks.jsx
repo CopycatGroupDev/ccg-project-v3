@@ -24,9 +24,8 @@ export const navLinks = [
         { path: '/labs#dev', title: 'Développement Web', icon: 'Dev web' },
         { path: '/labs#com', title: 'Réseaux sociaux', icon: 'Com digitale' }
     ]},
-    {path: '/comptoirs', title: 'Nos comptoirs', color: colors.default, dropdown: [
+    {path: '/comptoirs', title: 'Notre comptoir', color: colors.default, dropdown: [
         {path: '/sevres', title: 'CopyCat Sèvres', icon: 'boutique'},
-        {path: '/boulogne', title: 'CopyCat Boulogne', icon: 'boutique'},
     ]},
     {path: '/about', title: 'En savoir plus', color: colors.default, dropdown: [
         { path: '/about', title: 'A propos', icon: 'icone a propos' },

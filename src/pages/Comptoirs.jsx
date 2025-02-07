@@ -26,7 +26,6 @@ const data = {
     },
     cards : [
         { title: 'Copycat Sèvres', color: colors.print, img : '/photos/Sèvres2.jpg', infos : renseignements.Sèvres, link : '/sevres' },
-        { title: 'Copycat Boulogne', color: colors.shop, img : '/photos/Boulogne2.jpg', infos : renseignements.Boulogne, link : '/boulogne' },
     ]
 }
 
@@ -41,7 +40,7 @@ export default function Comptoirs() {
         }} />
         <Text>
             <TitleWithBar>
-                <Title>Nos Comptoirs</Title>
+                <Title>Notre Comptoir</Title>
                 <hr />
                 <span />
             </TitleWithBar>

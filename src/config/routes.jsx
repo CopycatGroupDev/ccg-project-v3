@@ -5,7 +5,6 @@ import Print from "../pages/Print";
 import Shop from "../pages/Shop";
 import Solutions from "../pages/Solutions";
 import Sevres from "../pages/Sevres";
-import Boulogne from "../pages/Boulogne";
 import Comptoirs from "../pages/Comptoirs";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
@@ -22,7 +21,6 @@ const routes = [
     {path: '/print', element: <Print />},
     {path: '/labs', element: <Labs />},
     {path: '/comptoirs/', element: <Comptoirs />},
-    {path: '/boulogne', element: <Boulogne />},
     {path: '/sevres', element: <Sevres />},
     {path: '/about', element: <About />},
     {path: '/contact', element: <Contact />},
