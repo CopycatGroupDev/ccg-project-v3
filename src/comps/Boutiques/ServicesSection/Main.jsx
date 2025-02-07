@@ -18,7 +18,7 @@ function capitalizeFirstLetter(string) {
 const Services = ({ services }) => {
 	return (
 		<Container>
-			<Title color={'black'}>Nos services dans nos comptoirs :</Title>
+			<Title color={'black'}>Nos services dans notre comptoir :</Title>
 			<GridContainer>
 				{/*services.map(({ mainImg, imgs, path, text, title, color, icon, trnsIcon = false }, key) => {  
 					return (

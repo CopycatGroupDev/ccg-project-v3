@@ -1499,7 +1499,7 @@ text-decoration: none;
   color: #0061ad;
 `;R.b`
   color: ${({color:e})=>e};
-`;function jE(e){return e.charAt(0).toUpperCase()+e.slice(1)}const kE=({services:e})=>u.jsxs(Mx,{children:[u.jsx(we,{color:"black",children:"Nos services dans nos comptoirs :"}),u.jsx(bE,{children:u.jsx(EE,{children:e==null?void 0:e.map(({color:t,icon:n,title:r},i)=>u.jsxs(PE,{color:t,children:[u.jsx("img",{src:`/icons/comptoirs/${n}.png`,alt:""}),u.jsx("span",{color:t,children:jE(r)})]},i))})})]}),EE=R(Mx)`
+`;function jE(e){return e.charAt(0).toUpperCase()+e.slice(1)}const kE=({services:e})=>u.jsxs(Mx,{children:[u.jsx(we,{color:"black",children:"Nos services dans notre comptoir :"}),u.jsx(bE,{children:u.jsx(EE,{children:e==null?void 0:e.map(({color:t,icon:n,title:r},i)=>u.jsxs(PE,{color:t,children:[u.jsx("img",{src:`/icons/comptoirs/${n}.png`,alt:""}),u.jsx("span",{color:t,children:jE(r)})]},i))})})]}),EE=R(Mx)`
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
 	gap: 1em;
@@ -1570,7 +1570,7 @@ text-decoration: none;
     }
 `,Tl=R(we)`
     font-size: 1.65em;
-`,LE=()=>u.jsxs($x,{children:[u.jsxs("section",{children:[u.jsx("img",{src:"/photos/bank-phrom-Tzm3Oyu_6sk-unsplash.png",alt:""}),u.jsxs("article",{children:[u.jsx(Tl,{children:"Les Comptoirs Copycat"}),u.jsxs("p",{children:["Chez Copycat Group nous souhaitons garder le plus de contact physique avec nos clients. Pour cela nous avons mis en place nos comptoirs a Sèvres et Boulogne afin de pouvoir vous accompagner au mieux sur tous vos projets. ",u.jsx("br",{})," Vous pourrez y retrouver des experts en impression, graphisme et fournitures et vous faire accompagner pour vos demandes de solutions digitales, informatiques et multimédias. Apportez nous vous appareils pour toute réparation ou installation de logiciels."]})]})]}),u.jsxs("article",{children:[u.jsx(Tl,{children:"Notre concept"}),u.jsx("p",{children:"Découvrez Copycat à Sèvres et Boulogne, vos comptoirs idéaux pour les fournitures de bureau et les services d'impression. Nos équipes dévouées offrent des produits de qualité et des solutions documentaires personnalisées pour répondre à tous vos besoins de particuliers et professionnels."})]})]}),OE=R.div`
+`,LE=()=>u.jsxs($x,{children:[u.jsxs("section",{children:[u.jsx("img",{src:"/photos/bank-phrom-Tzm3Oyu_6sk-unsplash.png",alt:""}),u.jsxs("article",{children:[u.jsx(Tl,{children:"Les Comptoirs Copycat"}),u.jsxs("p",{children:["Chez Copycat Group nous souhaitons garder le plus de contact physique avec nos clients. Pour cela nous avons mis en place notre comptoir a Sèvres et Boulogne afin de pouvoir vous accompagner au mieux sur tous vos projets. ",u.jsx("br",{})," Vous pourrez y retrouver des experts en impression, graphisme et fournitures et vous faire accompagner pour vos demandes de solutions digitales, informatiques et multimédias. Apportez nous vous appareils pour toute réparation ou installation de logiciels."]})]})]}),u.jsxs("article",{children:[u.jsx(Tl,{children:"Notre concept"}),u.jsx("p",{children:"Découvrez Copycat à Sèvres et Boulogne, vos comptoirs idéaux pour les fournitures de bureau et les services d'impression. Nos équipes dévouées offrent des produits de qualité et des solutions documentaires personnalisées pour répondre à tous vos besoins de particuliers et professionnels."})]})]}),OE=R.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
