@@ -1,5 +1,5 @@
 import AltHeader from "../comps/Header/AltHeader";
-import { Actions, Banner, Intro, StyledLink, Trio } from "../comps/RSE";
+import { Actions, Intro, StyledLink, Trio } from "../comps/RSE";
 import Default from "../wrappers/Default";
 import React from 'react';
 
