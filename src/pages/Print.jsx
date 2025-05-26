@@ -17,7 +17,7 @@ const data = {
       logo: '/logo/pr1.png',
       rows : [
         <>Réalisez des impressions à votre image !</>,
-        <HeaderButton key={btoa(Math.random())} onClick={() => window.open('http://www.copycatprint.fr/accueil/')} color={colors.print}> IMPRIMEZ VOS DOCUMENTS</HeaderButton>
+        <HeaderButton key={btoa(Math.random())} onClick={() => window.open('http://localhost:5173/contact')} color={colors.print}> DEMANDEZ UN DEVIS</HeaderButton>
       ],
       appendixRow : <>Nous offrons des solutions d'impression de haute qualité pour vos brochures, affiches et documents professionnels. Avec notre expertise, nous garantissons une présentation soignée et un rendu impeccable de vos supports imprimés. Personnalisez  aussi vos goodies afin d’y apporter une touche personnelle et renforcer votre image de marque !</>
   }
@@ -34,9 +34,6 @@ export default function Print() {
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
         />
-        <Links id="links" banner={true} color={colors.print} title={"Une partie de nos impressions en ligne sur :"} links={[
-            { img: '/photos/Supports imprimés.png', text: 'Imprimez vos supports de communications', link: 'http://copycatprint.fr/', color: colors.print }
-        ]} />
     </Default>
 }
 
