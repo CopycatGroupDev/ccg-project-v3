@@ -17,7 +17,7 @@ const data = {
       logo: '/logo/pr1.png',
       rows : [
         <>Réalisez des impressions à votre image !</>,
-        <HeaderButton key={btoa(Math.random())} onClick={() => window.open('http://localhost:5173/contact')} color={colors.print}> DEMANDEZ UN DEVIS</HeaderButton>
+        <HeaderButton key={btoa(Math.random())} onClick={() => window.open('https://www.copycatgroup.fr/contact')} color={colors.print}> DEMANDEZ UN DEVIS</HeaderButton>
       ],
       appendixRow : <>Nous offrons des solutions d'impression de haute qualité pour vos brochures, affiches et documents professionnels. Avec notre expertise, nous garantissons une présentation soignée et un rendu impeccable de vos supports imprimés. Personnalisez  aussi vos goodies afin d’y apporter une touche personnelle et renforcer votre image de marque !</>
   }
