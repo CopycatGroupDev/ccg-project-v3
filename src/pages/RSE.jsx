@@ -10,7 +10,6 @@ export default function RSE() {
         <AltHeader bg={'/banners/Bannière RSE.png'} height={400} coverFull={true} bgCover={true}/>
         <Intro />
         <Trio />
-        <Banner />
         <Actions />
         <StyledLink to="/contact?subject=rse">Demander la charte RSE Copycat Group</StyledLink>
     </Default>
